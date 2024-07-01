@@ -1,12 +1,14 @@
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import image from '../assets/Teknofab.png';
 
 const navigation = [
-  { nameEn: 'Home', nameTr: 'EV', nameAr: 'الصفحة الرئيسية', href: '#', current: true },
-  { nameEn: 'About', nameTr: 'Hakkinda', nameAr: 'نبذة عننا', href: '#', current: false },
-  { nameEn: 'Projects', nameTr: 'Projeler', nameAr: 'مشروعاتنا', href: '#', current: false },
-  { nameEn: 'Contact', nameTr: 'Temas Etmek', nameAr: 'تواصل معنا', href: '#', current: false },
+  { nameEn: 'Home', nameTr: 'EV', nameAr: 'الصفحة الرئيسية', to: '/', current: true },
+  { nameEn: 'About', nameTr: 'Hakkinda', nameAr: 'نبذة عننا', to: '/', current: false },
+  { nameEn: 'Projects', nameTr: 'Projeler', nameAr: 'مشروعاتنا', to: '/', current: false },
+  { nameEn: 'Contact', nameTr: 'Temas Etmek', nameAr: 'تواصل معنا', to: '/contact', current: false },
 ]
 
 function classNames(...classes) {
@@ -29,7 +31,7 @@ export default function Navbar() {
   }, [language]);
 
   return (
-    <Disclosure as="nav" className="bg-gray-800">
+    <Disclosure as="nav" className="bg-gray-700">
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -37,8 +39,8 @@ export default function Navbar() {
               <div className="flex flex-shrink-0 items-center">
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                  alt="Your Company"
+                  src={image}
+                  alt="Logo"
                 />
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
@@ -67,9 +69,9 @@ export default function Navbar() {
                       }
 
                       return (
-                        <a
+                        <Link
                           key={itemName}
-                          href={item.href}
+                          to={item.to}
                           className={classNames(
                             item.current ? 'bg-gray-900 text-white' : 'text-gray-300 hover:bg-gray-700 hover:text-white',
                             'rounded-md px-3 py-2 text-sm font-medium'
@@ -77,7 +79,7 @@ export default function Navbar() {
                           aria-current={item.current ? 'page' : undefined}
                         >
                           {itemName}
-                        </a>
+                        </Link>
                       )
                     })}
                   </div>
@@ -108,38 +110,38 @@ export default function Navbar() {
                   >
                     <MenuItem>
                       {({ focus }) => (
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-language="EN"
                           onClick={() => handleLanguageChange('EN')}
                           className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
                           English
-                        </a>
+                        </Link>
                       )}
                     </MenuItem>
                     <MenuItem>
                       {({ focus }) => (
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-language="TR"
                           onClick={() => handleLanguageChange('TR')}
                           className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
                           Turkish
-                        </a>
+                        </Link>
                       )}
                     </MenuItem>
                     <MenuItem>
                       {({ focus }) => (
-                        <a
-                          href="#"
+                        <Link
+                          to="#"
                           data-language="AR"
                           onClick={() => handleLanguageChange('AR')}
                           className={classNames(focus ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
                         >
                           Arabic
-                        </a>
+                        </Link>
                       )}
                     </MenuItem>
                   </MenuItems>
