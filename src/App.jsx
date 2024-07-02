@@ -1,23 +1,21 @@
-
-import { Router, Routes, Route } from "react-router-dom"
-import AboutSection from "./Components/AboutSection"
-import Cards from "./Components/Cards"
-import Footer from "./Components/Footer"
-import Hero from "./Components/Hero"
-import Navbar from "./Components/Navbar"
-import Contact from "./Components/Contact"
-import About from "./Components/About"
-import { useState } from "react"
-import "./App.css";
-
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Contact from './Components/Contact';
+import About from './Components/About';
+import Home from './Components/Home';
+import './App.css';
 
 function App() {
-  const [language, setLanguage] = useState("EN");
+  const [language,setLanguage] = useState("EN")
   return (
-    <><Navbar language={language} setLanguage={setLanguage} /> <Hero /> <Cards /> <About language={language}/> <Contact language={language}/> <Footer />
-
-    </>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Home language={language} setLanguage={setLanguage}/>} />
+        <Route path="/about" element={<About language={language} setLanguage={setLanguage}/>} />
+        <Route path="/contact" element={<Contact language={language} setLanguage={setLanguage}/>} />
+        </Routes>
+    </Router>
   );
 }
 
-export default App
+export default App;

@@ -1,11 +1,11 @@
 import Navbar from "./Navbar"
 
-const Contact = ({ language }) => {
+const Contact = ({ language ,setLanguage}) => {
 console.log(language);
     return (
 
         <>
-            {/* <Navbar /> */}
+            <Navbar language={language} setLanguage={setLanguage} />
             <section className="bg-white dark:bg-gray-900">
                 <div className="pt-10 pb-3 lg:pt-16 px-4 mx-auto max-w-screen-md">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">

@@ -7,7 +7,7 @@ import Rewards from "./Rewards";
 import Navbar from "./Navbar";
 // import Tabs from "./Tabs";
 
-export default function About({ language }) {
+export default function About({ language,setLanguage }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
@@ -15,7 +15,7 @@ export default function About({ language }) {
     
    
     <Fragment>
-         {/* <Navbar/> */}
+         <Navbar language={language} setLanguage={setLanguage}/>
       <div className="About py-10">
         <div className="px-2 sm:px-6 lg:px-8">
           <div className="about-heading-container mb-10">

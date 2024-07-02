@@ -10,13 +10,14 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import logo from "../assets/Teknofab.png"
 
 const navigation = [
   {
     nameEn: "Home",
     nameTr: "EV",
     nameAr: "الصفحة الرئيسية",
-    href: "#",
+    href: "/",
     current: true,
   },
   {
@@ -30,7 +31,7 @@ const navigation = [
     nameEn: "Projects",
     nameTr: "Projeler",
     nameAr: "مشروعاتنا",
-    href: "#",
+    href: "/",
     current: false,
   },
   {
@@ -78,7 +79,7 @@ export default function Navbar({ language, setLanguage }) {
               <div className="flex flex-shrink-0 items-center">
                 <img
                   className="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                  src={logo}
                   alt="Your Company"
                 />
               </div>
