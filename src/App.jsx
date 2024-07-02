@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Contact from './Components/Contact';
 import About from './Components/About';
@@ -6,7 +6,12 @@ import Home from './Components/Home';
 import './App.css';
 
 function App() {
-  const [language,setLanguage] = useState("EN")
+  const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'EN');
+
+  useEffect(() => {
+    localStorage.setItem('language', language);
+  }, [language]);
+  
   return (
     <Router>
       <Routes>
