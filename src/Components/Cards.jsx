@@ -1,3 +1,5 @@
+import image from "../assets/image 1.jpg"
+
 export default function Cards() {
     return (
         <>
@@ -11,7 +13,7 @@ export default function Cards() {
                     <a href="#!">
                         <img
                             className="rounded-t-lg"
-                            src="http://www.tamtas.net/Uploads/Content/Icon/fbd0c2fd-48ae-46b0-a1b4-49d03c79bae1.png?v-637855075010643191"
+                            src={image}
                             alt="Hollywood Sign on The Hill" />
                     </a>
                     <div className="p-6">
@@ -34,7 +36,7 @@ export default function Cards() {
                     <a href="#!">
                         <img
                             className="rounded-t-lg"
-                            src="http://www.tamtas.net/Uploads/Content/Icon/fbd0c2fd-48ae-46b0-a1b4-49d03c79bae1.png?v-637855075010643191"
+                            src={image}
                             alt="Hollywood Sign on The Hill" />
                     </a>
                     <div className="p-6">
@@ -57,7 +59,7 @@ export default function Cards() {
                     <a href="#!">
                         <img
                             className="rounded-t-lg"
-                            src="http://www.tamtas.net/Uploads/Content/Icon/fbd0c2fd-48ae-46b0-a1b4-49d03c79bae1.png?v-637855075010643191"
+                            src={image}
                             alt="Hollywood Sign on The Hill" />
                     </a>
                     <div className="p-6">
@@ -80,7 +82,7 @@ export default function Cards() {
                     <a href="#!">
                         <img
                             className="rounded-t-lg"
-                            src="http://www.tamtas.net/Uploads/Content/Icon/fbd0c2fd-48ae-46b0-a1b4-49d03c79bae1.png?v-637855075010643191"
+                            src={image}
                             alt="Hollywood Sign on The Hill" />
                     </a>
                     <div className="p-6">
