@@ -221,7 +221,7 @@ export default function Navbar({ language, setLanguage }) {
                   <DisclosureButton
                     key={itemName}
                     as="a"
-                    to={item.to}
+                    href={item.to}
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
