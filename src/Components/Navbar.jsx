@@ -17,28 +17,28 @@ const navigation = [
     nameEn: "Home",
     nameTr: "EV",
     nameAr: "الصفحة الرئيسية",
-    href: "/",
+    to: "/",
     current: true,
   },
   {
     nameEn: "About",
     nameTr: "Hakkinda",
     nameAr: "نبذة عننا",
-    href: "/about",
+    to: "/about",
     current: false,
   },
   {
     nameEn: "Projects",
     nameTr: "Projeler",
     nameAr: "مشروعاتنا",
-    href: "/",
+    to: "/",
     current: false,
   },
   {
     nameEn: "Contact",
     nameTr: "Temas Etmek",
     nameAr: "تواصل معنا",
-    href: "/contact",
+    to: "/contact",
     current: false,
   },
 ];
@@ -111,7 +111,7 @@ export default function Navbar({ language, setLanguage }) {
                       return (
                         <Link
                           key={itemName}
-                          to={item.href}
+                          to={item.to}
                           className={classNames(
                             item.current
                               ? "bg-gray-900 text-white"
@@ -221,7 +221,7 @@ export default function Navbar({ language, setLanguage }) {
                   <DisclosureButton
                     key={itemName}
                     as="a"
-                    href={item.href}
+                    to={item.to}
                     className={classNames(
                       item.current
                         ? "bg-gray-900 text-white"
