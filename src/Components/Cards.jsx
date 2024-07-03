@@ -11,13 +11,13 @@ export default function Cards({language}) {
                                 ? `Complementary Products`
                                 : "Tamamlayıcı ürünler"}</h4>
                 </div>
-            <div className="grid-cols-1 sm:grid md:grid-cols-4 pb-4">
+            <div className=" grid grid-cols-1 gap-x-5 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-5 pb-4">
                 
                 <div
-                    className="mx-3 mt-6 cards flex flex-col rounded-lg hover:bg-gray-400 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-gray-500 sm:shrink-0 sm:grow sm:basis-0 animate-fade-down animate-once">
-                    <a href="#!">
+                    className="mx-3 mt-6 cards  flex flex-col hover:bg-gray-400 rounded-lg text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-gray-500 sm:shrink-0 sm:grow sm:basis-0 animate-fade-down animate-once">
+                    <a href="#" className="hvr-float">
                         <img
-                            className="rounded-t-lg"
+                            className="rounded-t-lg  w-full object-cover object-center lg:w-full"
                             src={image}
                             alt="Hollywood Sign on The Hill" />
                     
@@ -54,9 +54,9 @@ export default function Cards({language}) {
 
                 <div
                     className="mx-3 mt-6 cards flex flex-col rounded-lg hover:bg-gray-400 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-gray-500 sm:shrink-0 sm:grow sm:basis-0 animate-fade-down animate-once">
-                    <a href="#!">
+                    <a href="#" className="hvr-float">
                         <img
-                            className="rounded-t-lg"
+                            className="rounded-t-lg w-full object-cover object-center lg:w-full"
                             src={image}
                             alt="Hollywood Sign on The Hill" />
                     
@@ -93,9 +93,9 @@ export default function Cards({language}) {
 
                 <div
                     className="mx-3 mt-6 cards flex flex-col rounded-lg hover:bg-gray-400 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-gray-500 sm:shrink-0 sm:grow sm:basis-0 animate-fade-down animate-once">
-                    <a href="#!">
+                    <a href="#" className="hvr-float">
                         <img
-                            className="rounded-t-lg"
+                            className="rounded-t-lg w-full object-cover object-center lg:w-full"
                             src={image}
                             alt="Hollywood Sign on The Hill" />
                     
@@ -132,9 +132,9 @@ export default function Cards({language}) {
 
                 <div
                     className="mx-3 mt-6 cards flex flex-col rounded-lg hover:bg-gray-400 text-surface shadow-secondary-1 dark:bg-surface-dark dark:text-gray-500 sm:shrink-0 sm:grow sm:basis-0 animate-fade-down animate-once">
-                    <a href="#!">
+                    <a href="#" className="hvr-float">
                         <img
-                            className="rounded-t-lg"
+                            className="rounded-t-lg w-full object-cover object-center lg:w-full"
                             src={image}
                             alt="Hollywood Sign on The Hill" />
                     
