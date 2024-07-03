@@ -47,7 +47,8 @@ const Contact = ({ language, setLanguage }) => {
 
         <>
             <Navbar language={language} setLanguage={setLanguage} />
-            <section className="bg-white dark:bg-gray-900">
+            
+            <section className="contact">
                 <div className="pt-10 pb-3 lg:pt-16 px-4 mx-auto max-w-screen-md">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
                         {language === "AR"
@@ -64,8 +65,8 @@ const Contact = ({ language, setLanguage }) => {
                                 : "Teknik bir sorun mu var? Bir beta özelliği hakkında geri bildirim mi göndermek istiyorsunuz? İş planımızla ilgili ayrıntılara mı ihtiyacınız var? Bilmemize izin ver"}
                     </p>
                 </div>
-            </section>
-            <div className="relative flex items-top mt-0 justify-center min-h-screen bg-white dark:bg-gray-900 sm:items-center sm:pt-0">
+           
+            <div className="relative flex items-top mt-0 justify-center min-h-screen  sm:items-center sm:pt-0">
                 <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
                     <div className="mt-5 overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">
@@ -188,6 +189,7 @@ const Contact = ({ language, setLanguage }) => {
                     </div>
                 </div>
             </div>
+            </section>
         </>
     )
 }
