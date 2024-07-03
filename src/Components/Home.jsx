@@ -8,7 +8,7 @@ export default function Home ({language,setLanguage}){
         <>
         <Navbar language={language} setLanguage={setLanguage}/>
         <Hero/>
-        <Cards/>
+        <Cards language={language}/>
         <Footer/> 
         </>
         );

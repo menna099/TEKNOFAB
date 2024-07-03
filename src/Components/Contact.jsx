@@ -1,7 +1,48 @@
 import Navbar from "./Navbar"
+import emailjs from "@emailjs/browser";
+import React, { useState, useEffect } from "react";
 
-const Contact = ({ language ,setLanguage}) => {
-console.log(language);
+const Contact = ({ language, setLanguage }) => {
+    const [formState, setFormState] = useState({
+        email: "",
+        subject: "",
+        message: "",
+    });
+
+    const [msg, setMsg] = useState("");
+
+    useEffect(() => {
+        emailjs.init("P8dGm3IeIYRGmEEx3");
+    }, []);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormState({
+            ...formState,
+            [name]: value,
+        });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // Send form data via EmailJS
+        emailjs
+            .sendForm("service_vfjt0xw", "template_oc2xozk", e.target)
+            .then(
+                () => {
+                    setMsg("Email Sent");
+                    setFormState({
+                        email: "",
+                        subject: "",
+                        message: "",
+                    });
+                },
+                (error) => {
+                    setMsg("Not Sent! Sign Up with EmailJS.");
+                }
+            );
+    };
+
     return (
 
         <>
@@ -30,18 +71,18 @@ console.log(language);
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">
                             <div className="p-6 mr-2 bg-gray-100 dark:bg-gray-800 sm:rounded-lg">
                                 <h1 className="text-3xl sm:text-3xl text-gray-800 dark:text-white font-extrabold tracking-tight">
-                                {language === "AR"
-                            ? ` تواصل معنا `
-                            : language === "EN"
-                                ? `Git in Touch`
-                                : "Temasta olmak"}
+                                    {language === "AR"
+                                        ? ` تواصل معنا `
+                                        : language === "EN"
+                                            ? `Git in Touch`
+                                            : "Temasta olmak"}
                                 </h1>
                                 <p className="text-normal text-lg sm:text-xl font-medium text-gray-600 dark:text-gray-400 mt-2">
-                                {language === "AR"
-                            ? ` تواصل معنا `
-                            : language === "EN"
-                                ? `Fill in the form to start a conversation`
-                                : "Görüşme başlatmak için formu doldurun"}
+                                    {language === "AR"
+                                        ? ` املأ النموذج لبدء محادثة  `
+                                        : language === "EN"
+                                            ? `Fill in the form to start a conversation`
+                                            : "Görüşme başlatmak için formu doldurun"}
                                 </p>
 
                                 <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
@@ -84,44 +125,61 @@ console.log(language);
                                 </div>
 
                             </div>
-                            <form action="#" className="space-y-8">
+                            <form action="#" className="space-y-8" onSubmit={handleSubmit}>
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"> {language === "AR"
-                            ? `بريدك الإلكتروني `
-                            : language === "EN"
-                                ? `Your Email`
-                                : "E-postanız"}</label>
-                                    <input type="email" id="email" className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder="name@gmail.com" required />
+                                        ? `بريدك الإلكتروني `
+                                        : language === "EN"
+                                            ? `Your Email`
+                                            : "E-postanız"}</label>
+                                    <input type="email" id="email" name="email" value={formState.email}
+                                        onChange={handleChange} className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light" placeholder={language === "AR"
+                                            ? ` name@gmail.com `
+                                            : language === "EN"
+                                                ? `name@gmail.com`
+                                                : "isim@gmail.com"} required />
                                 </div>
                                 <div>
                                     <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"> {language === "AR"
-                            ? `الموضوع `
-                            : language === "EN"
-                                ? `Subject`
-                                : "Konu"}</label>
+                                        ? `الموضوع `
+                                        : language === "EN"
+                                            ? `Subject`
+                                            : "Konu"}</label>
                                     <input
                                         type="text"
                                         id="subject"
+                                        name="subject"
+                                        value={formState.subject}
+                                        onChange={handleChange}
                                         className="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500 dark:shadow-sm-light"
-                                        placeholder="Let us know how we can help you"
+                                        placeholder={language === "AR"
+                                            ? `اخبرنا كيف  يمكننا مساعدتك `
+                                            : language === "EN"
+                                                ? `Tell us how we can help you`
+                                                : "Size nasıl yardımcı olabileceğimizi bize söyleyin"}
                                         required />
                                 </div>
                                 <div className="sm:col-span-2">
-                                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"> 
-                                    {language === "AR"
-                            ? `رسالتك `
-                            : language === "EN"
-                                ? `Your Message`
-                                : "Mesajın"}
+                                    <label htmlFor="message" className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">
+                                        {language === "AR"
+                                            ? `رسالتك `
+                                            : language === "EN"
+                                                ? `Your Message`
+                                                : "Mesajın"}
                                     </label>
-                                    <textarea id="message" rows="6" className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Leave a comment..."></textarea>
+                                    <textarea id="message" rows="6" name="message" value={formState.message}
+                                        onChange={handleChange} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder={language === "AR"
+                                            ? `اترك تعليقك....`
+                                            : language === "EN"
+                                                ? `Leave a comment...`
+                                                : "Bir yorum bırakın..."}></textarea>
                                 </div>
                                 <button type="submit" className="py-3 hvr-grow px-5 text-sm font-medium text-center text-white rounded-lg bg-primary-700 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
-                                {language === "AR"
-                            ? ` أرسل`
-                            : language === "EN"
-                                ? `Send Message`
-                                : "Mesaj gönder"}
+                                    {language === "AR"
+                                        ? `ارسال`
+                                        : language === "EN"
+                                            ? `Send Message`
+                                            : "Mesaj gönder"}
                                 </button>
                             </form>
                         </div>
@@ -132,3 +190,89 @@ console.log(language);
     )
 }
 export default Contact;
+
+{/* <script type="text/javascript" 
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> 
+</script> 
+    <script>  
+const msg = document.querySelector(".form-message");  
+(function () {  
+  // https://dashboard.emailjs.com/admin/account  
+  emailjs.init("P8dGm3IeIYRGmEEx3");  
+})();  
+  
+window.onload = function () {  
+  document  
+    .getElementById("contact-form")  
+    .addEventListener("submit", function (event) {  
+      event.preventDefault();  
+      let isValid = true; 
+ 
+    var fullName = document.getElementById('name').value; 
+    var email = document.getElementById('exampleInputEmail1').value; 
+    var companyName = document.getElementById('companyName').value; 
+    var message = document.querySelector('textarea').value; 
+ 
+    if (!fullName) { 
+        document.getElementById('fullName-error').style.display = 'block'; 
+        isValid = false; 
+    } else { 
+        document.getElementById('fullName-error').style.display = 'none'; 
+    } 
+ 
+    if (!email) { 
+        document.getElementById('email-error').style.display = 'block'; 
+        isValid = false; 
+    } else { 
+        document.getElementById('email-error').style.display = 'none'; 
+    } 
+ 
+    if (!companyName) { 
+        document.getElementById('companyName-error').style.display = 'block'; 
+        isValid = false; 
+    } else { 
+        document.getElementById('companyName-error').style.display = 'none'; 
+    } 
+ 
+    if (!message) { 
+        document.getElementById('message-error').style.display = 'block'; 
+        isValid = false; 
+    } else { 
+        document.getElementById('message-error').style.display = 'none'; 
+    } 
+ 
+    document.getElementById('name').addEventListener('input', function () { 
+        document.getElementById('fullName-error').style.display = 'none'; 
+    }); 
+ 
+    document.getElementById('exampleInputEmail1').addEventListener('input', function () { 
+        document.getElementById('email-error').style.display = 'none'; 
+    }); 
+     
+    document.getElementById('companyName').addEventListener('input', function () { 
+        document.getElementById('companyName-error').style.display = 'none'; 
+    }); 
+ 
+    document.querySelector('textarea').addEventListener('input', function () { 
+        document.getElementById('message-error').style.display = 'none'; 
+    }); 
+ 
+      // Replace With Your Email Service ID & Contact Form ID Which You Will Get After Registering With EmailJs  
+      if (isValid) { 
+        emailjs.sendForm("service_vfjt0xw", "template_oc2xozk", this).then( 
+            function () { 
+                document.getElementById("contact-form").reset(); 
+                msg.innerHTML = ""; 
+                msg.innerHTML += "<span class='success-msg'>Email Sent</span>"; 
+                msg.classList.add("show"); 
+                setTimeout(() => msg.classList.remove("show"), 2000); 
+            }, 
+            function (error) { 
+                msg.classList.add("show"); 
+                msg.innerHTML += "<span class='error-msg'>Not Sent ! Sign Up with EmailJS.</span>"; 
+            } 
+        ); 
+    } 
+    });  
+};  
+    </script> */}

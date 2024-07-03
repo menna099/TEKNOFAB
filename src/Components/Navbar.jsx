@@ -9,37 +9,34 @@ import {
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Teknofab.png"
+import image from "../assets/language.jpeg"
 
-const navigation = [
+const initialNavigation = [
   {
     nameEn: "Home",
     nameTr: "EV",
     nameAr: "الصفحة الرئيسية",
     to: "/",
-    current: true,
   },
   {
     nameEn: "About",
     nameTr: "Hakkinda",
     nameAr: "نبذة عننا",
     to: "/about",
-    current: false,
   },
   {
     nameEn: "Projects",
     nameTr: "Projeler",
     nameAr: "مشروعاتنا",
-    to: "/",
-    current: false,
+    to: "/projects",
   },
   {
     nameEn: "Contact",
     nameTr: "Temas Etmek",
     nameAr: "تواصل معنا",
     to: "/contact",
-    current: false,
   },
 ];
 
@@ -48,6 +45,9 @@ function classNames(...classes) {
 }
 
 export default function Navbar({ language, setLanguage }) {
+  const location = useLocation();
+  const [navigation, setNavigation] = useState(initialNavigation);
+
   const handleLanguageChange = (lang) => {
     setLanguage(lang);
   };
@@ -59,7 +59,7 @@ export default function Navbar({ language, setLanguage }) {
       document.documentElement.dir = "ltr";
     }
   }, [language]);
-  
+
   useEffect(() => {
     if (language === "AR") {
       document.body.className = "AR";
@@ -69,6 +69,14 @@ export default function Navbar({ language, setLanguage }) {
       document.body.className = "TR";
     }
   }, [language]);
+
+  useEffect(() => {
+    const updatedNavigation = initialNavigation.map(item => ({
+      ...item,
+      current: location.pathname === item.to,
+    }));
+    setNavigation(updatedNavigation);
+  }, [location]);
 
   return (
     <Disclosure as="nav" className="bg-gray-800">
@@ -85,7 +93,7 @@ export default function Navbar({ language, setLanguage }) {
               </div>
               <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                 <div className="absolute inset-y-0 flex items-center sm:hidden">
-                  {/* Mobile menu button*/}
+                  {/* Mobile menu button */}
                   <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Open main menu</span>
@@ -140,7 +148,7 @@ export default function Navbar({ language, setLanguage }) {
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
-                        src="https://tse4.mm.bing.net/th?id=OIP.aKlgOETtIFeAWvrUFsNkfQHaHa&pid=Api&P=0&h=220"
+                        src={image}
                         alt=""
                       />
                     </MenuButton>
