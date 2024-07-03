@@ -181,7 +181,9 @@ const Contact = ({ language, setLanguage }) => {
                                             ? `Send Message`
                                             : "Mesaj gönder"}
                                 </button>
+                                <div className="form-message text-blue-300">{msg && <span>{msg}</span>}</div>
                             </form>
+                           
                         </div>
                     </div>
                 </div>
@@ -190,89 +192,3 @@ const Contact = ({ language, setLanguage }) => {
     )
 }
 export default Contact;
-
-{/* <script type="text/javascript" 
-src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"> 
-</script> 
-    <script>  
-const msg = document.querySelector(".form-message");  
-(function () {  
-  // https://dashboard.emailjs.com/admin/account  
-  emailjs.init("P8dGm3IeIYRGmEEx3");  
-})();  
-  
-window.onload = function () {  
-  document  
-    .getElementById("contact-form")  
-    .addEventListener("submit", function (event) {  
-      event.preventDefault();  
-      let isValid = true; 
- 
-    var fullName = document.getElementById('name').value; 
-    var email = document.getElementById('exampleInputEmail1').value; 
-    var companyName = document.getElementById('companyName').value; 
-    var message = document.querySelector('textarea').value; 
- 
-    if (!fullName) { 
-        document.getElementById('fullName-error').style.display = 'block'; 
-        isValid = false; 
-    } else { 
-        document.getElementById('fullName-error').style.display = 'none'; 
-    } 
- 
-    if (!email) { 
-        document.getElementById('email-error').style.display = 'block'; 
-        isValid = false; 
-    } else { 
-        document.getElementById('email-error').style.display = 'none'; 
-    } 
- 
-    if (!companyName) { 
-        document.getElementById('companyName-error').style.display = 'block'; 
-        isValid = false; 
-    } else { 
-        document.getElementById('companyName-error').style.display = 'none'; 
-    } 
- 
-    if (!message) { 
-        document.getElementById('message-error').style.display = 'block'; 
-        isValid = false; 
-    } else { 
-        document.getElementById('message-error').style.display = 'none'; 
-    } 
- 
-    document.getElementById('name').addEventListener('input', function () { 
-        document.getElementById('fullName-error').style.display = 'none'; 
-    }); 
- 
-    document.getElementById('exampleInputEmail1').addEventListener('input', function () { 
-        document.getElementById('email-error').style.display = 'none'; 
-    }); 
-     
-    document.getElementById('companyName').addEventListener('input', function () { 
-        document.getElementById('companyName-error').style.display = 'none'; 
-    }); 
- 
-    document.querySelector('textarea').addEventListener('input', function () { 
-        document.getElementById('message-error').style.display = 'none'; 
-    }); 
- 
-      // Replace With Your Email Service ID & Contact Form ID Which You Will Get After Registering With EmailJs  
-      if (isValid) { 
-        emailjs.sendForm("service_vfjt0xw", "template_oc2xozk", this).then( 
-            function () { 
-                document.getElementById("contact-form").reset(); 
-                msg.innerHTML = ""; 
-                msg.innerHTML += "<span class='success-msg'>Email Sent</span>"; 
-                msg.classList.add("show"); 
-                setTimeout(() => msg.classList.remove("show"), 2000); 
-            }, 
-            function (error) { 
-                msg.classList.add("show"); 
-                msg.innerHTML += "<span class='error-msg'>Not Sent ! Sign Up with EmailJS.</span>"; 
-            } 
-        ); 
-    } 
-    });  
-};  
-    </script> */}
