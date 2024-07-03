@@ -17,7 +17,7 @@ export default function Services({ language }) {
       <div className="services py-10 ">
         <div className="px-5 sm:px-8 lg:px-8">
           <div className="services-heading-container mb-10">
-            <h1 className="Heading-title font-bold  bg-primaryColor p-3 text-center my-4 text-white About_title">
+            <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
               {language === "AR"
                 ? ` خدماتنـــا `
                 : language === "EN"
@@ -25,7 +25,7 @@ export default function Services({ language }) {
                 : "Hizmetlerimiz"}
             </h1>
           </div>
-          <p className="services-desc text-gray-900 text-center">
+          <p className="services-desc text-white text-center">
             {language === "AR"
               ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
               : language === "EN"

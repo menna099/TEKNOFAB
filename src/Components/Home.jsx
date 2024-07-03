@@ -1,6 +1,7 @@
 import Cards from "./Cards";
 import Footer from "./Footer";
 import Hero from "./Hero";
+import Icons from "./Icons";
 import Navbar from "./Navbar";
 
 export default function Home ({language,setLanguage}){
@@ -10,6 +11,7 @@ export default function Home ({language,setLanguage}){
         <Hero/>
         <Cards language={language}/>
         <Footer/> 
+        <Icons/>
         </>
         );
 }

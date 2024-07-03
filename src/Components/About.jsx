@@ -5,6 +5,9 @@ import "aos/dist/aos.css";
 import Services from "./Services";
 import Rewards from "./Rewards";
 import Navbar from "./Navbar";
+import AboutVideo from "./AboutVideo";
+import Features from "./Features";
+import Icons from "./Icons";
 // import Tabs from "./Tabs";
 
 export default function About({ language,setLanguage }) {
@@ -58,9 +61,11 @@ export default function About({ language,setLanguage }) {
           </div>
         </div>
       </div>
+      <AboutVideo language={language} />
       <Services language={language} />
       <Rewards language={language} />
-      {/* <Tabs language={language} /> */}
+      <Features language={language} />
+      <Icons />
     </Fragment>
    
   );

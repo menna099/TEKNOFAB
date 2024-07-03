@@ -1,6 +1,7 @@
 import Navbar from "./Navbar"
 import emailjs from "@emailjs/browser";
 import React, { useState, useEffect } from "react";
+import Icons from "./Icons";
 
 const Contact = ({ language, setLanguage }) => {
     const [formState, setFormState] = useState({
@@ -190,6 +191,7 @@ const Contact = ({ language, setLanguage }) => {
                 </div>
             </div>
             </section>
+            <Icons/>
         </>
     )
 }
