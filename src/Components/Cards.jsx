@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import image from "../assets/image 1.jpg"
 import "aos/dist/aos.css";
 
@@ -42,11 +43,14 @@ export default function Cards({language}) {
                             className="inline-block hvr-pulse rounded bg-indigo-600 px-6 pb-2 pt-2.5 text-xs font-bold uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                             data-twe-ripple-init
                             data-twe-ripple-color="">
-                            {language === "AR"
+                                <Link to="/productdetails">
+                                {language === "AR"
                             ? `عرض التفاصيل`
                             : language === "EN"
                                 ? `View Details`
                                 : "Ayrıntıları görüntüle"}
+                                </Link>
+                           
                         </button>
                     </div>
                     </a>
@@ -81,11 +85,14 @@ export default function Cards({language}) {
                             className="inline-block hvr-pulse rounded bg-indigo-600 px-6 pb-2 pt-2.5 text-xs font-bold uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                             data-twe-ripple-init
                             data-twe-ripple-color="">
-                            {language === "AR"
+                                <Link to="/productdetails">
+                                {language === "AR"
                             ? `عرض التفاصيل`
                             : language === "EN"
                                 ? `View Details`
                                 : "Ayrıntıları görüntüle"}
+                                </Link>
+                           
                         </button>
                     </div>
                     </a>
@@ -120,11 +127,14 @@ export default function Cards({language}) {
                             className="inline-block hvr-pulse rounded bg-indigo-600 px-6 pb-2 pt-2.5 text-xs font-bold uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                             data-twe-ripple-init
                             data-twe-ripple-color="">
-                            {language === "AR"
+                                <Link to="/productdetails">
+                                {language === "AR"
                             ? `عرض التفاصيل`
                             : language === "EN"
                                 ? `View Details`
                                 : "Ayrıntıları görüntüle"}
+                                </Link>
+                           
                         </button>
                     </div>
                     </a>
@@ -159,11 +169,14 @@ export default function Cards({language}) {
                             className="inline-block hvr-pulse rounded bg-indigo-600 px-6 pb-2 pt-2.5 text-xs font-bold uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
                             data-twe-ripple-init
                             data-twe-ripple-color="">
-                            {language === "AR"
+                                <Link to="/productdetails">
+                                {language === "AR"
                             ? `عرض التفاصيل`
                             : language === "EN"
                                 ? `View Details`
                                 : "Ayrıntıları görüntüle"}
+                                </Link>
+                           
                         </button>
                     </div>
                     </a>

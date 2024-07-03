@@ -10,8 +10,8 @@ import {
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/Teknofab.png"
-import image from "../assets/language.jpeg"
+import logo from "../assets/Teknofab.png";
+import image from "../assets/language.jpeg";
 
 const initialNavigation = [
   {
@@ -71,7 +71,7 @@ export default function Navbar({ language, setLanguage }) {
   }, [language]);
 
   useEffect(() => {
-    const updatedNavigation = initialNavigation.map(item => ({
+    const updatedNavigation = initialNavigation.map((item) => ({
       ...item,
       current: location.pathname === item.to,
     }));
@@ -82,30 +82,26 @@ export default function Navbar({ language, setLanguage }) {
     <Disclosure as="nav" className="bg-gray-700">
       {({ open }) => (
         <>
-          <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-            <div className="relative flex h-16 items-center justify-between">
-              <div className="flex flex-shrink-0 items-center">
-                <img
-                  className="h-8 w-auto"
-                  src={logo}
-                  alt="Your Company"
-                />
-              </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="absolute inset-y-0 flex items-center sm:hidden">
-                  {/* Mobile menu button */}
-                  <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
-                    <span className="absolute -inset-0.5" />
-                    <span className="sr-only">Open main menu</span>
-                    {open ? (
-                      <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
-                    ) : (
-                      <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
-                    )}
-                  </DisclosureButton>
+          <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+            <div className="relative flex items-center justify-between h-16">
+            <div className="flex flex-shrink-0 items-center">
+                  <img className="h-8 w-auto" src={logo} alt="Your Company" />
                 </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex px-14 space-x-4">
+              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                
+                <div className="absolute inset-y-0 flex items-center sm:hidden">
+                {/* Mobile menu button*/}
+                <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <span className="sr-only">Open main menu</span>
+                  {open ? (
+                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                  ) : (
+                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                  )}
+                </DisclosureButton>
+              </div>
+                <div className="hidden sm:block sm:ml-6">
+                  <div className="flex space-x-4">
                     {navigation.map((item) => {
                       let itemName;
                       if (language === "EN") {
@@ -135,16 +131,10 @@ export default function Navbar({ language, setLanguage }) {
                   </div>
                 </div>
               </div>
-              <div
-                className={`absolute inset-y-0 ${
-                  language === "AR" ? "left-0" : "right-0"
-                } flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0`}
-              >
-                {/* language dropdown */}
-                <Menu as="div" className="relative ml-3 ltr:right-0 rtl:left-0">
-                  <div className="flex gap-3">
-                    <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="absolute -inset-1.5" />
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                <Menu as="div" className="relative ml-3">
+                  <div className="flex items-center gap-3">
+                    <MenuButton className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
                         className="h-8 w-8 rounded-full"
@@ -152,59 +142,46 @@ export default function Navbar({ language, setLanguage }) {
                         alt=""
                       />
                     </MenuButton>
-                    <div>
-                      <div className="py-1 text-gray-300 font-bold">
-                        {language}
-                      </div>
-                    </div>
+                    <div className="text-gray-300 font-bold">{language}</div>
                   </div>
-                  <MenuItems
-                    transition
-                    className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
-                  >
+                  <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
                     <MenuItem>
-                      {({ focus }) => (
-                        <Link
-                          to="#"
-                          data-language="EN"
+                      {({ active }) => (
+                        <button
                           onClick={() => handleLanguageChange("EN")}
                           className={classNames(
-                            focus ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
+                            active ? "bg-gray-100" : "",
+                            "block w-full px-4 py-2 text-sm text-gray-700"
                           )}
                         >
                           English
-                        </Link>
+                        </button>
                       )}
                     </MenuItem>
                     <MenuItem>
-                      {({ focus }) => (
-                        <Link
-                          to="#"
-                          data-language="TR"
+                      {({ active }) => (
+                        <button
                           onClick={() => handleLanguageChange("TR")}
                           className={classNames(
-                            focus ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
+                            active ? "bg-gray-100" : "",
+                            "block w-full px-4 py-2 text-sm text-gray-700"
                           )}
                         >
                           Turkish
-                        </Link>
+                        </button>
                       )}
                     </MenuItem>
                     <MenuItem>
-                      {({ focus }) => (
-                        <Link
-                          to="#"
-                          data-language="AR"
+                      {({ active }) => (
+                        <button
                           onClick={() => handleLanguageChange("AR")}
                           className={classNames(
-                            focus ? "bg-gray-100" : "",
-                            "block px-4 py-2 text-sm text-gray-700"
+                            active ? "bg-gray-100" : "",
+                            "block w-full px-4 py-2 text-sm text-gray-700"
                           )}
                         >
                           Arabic
-                        </Link>
+                        </button>
                       )}
                     </MenuItem>
                   </MenuItems>

@@ -4,6 +4,7 @@ import Contact from './Components/Contact';
 import About from './Components/About';
 import Home from './Components/Home';
 import './App.css';
+import ProductDetails from './Components/ProductDetails';
 
 function App() {
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'EN');
@@ -18,6 +19,7 @@ function App() {
         <Route exact path="/" element={<Home language={language} setLanguage={setLanguage}/>} />
         <Route path="/about" element={<About language={language} setLanguage={setLanguage}/>} />
         <Route path="/contact" element={<Contact language={language} setLanguage={setLanguage}/>} />
+        <Route path='/productdetails' element={<ProductDetails language={language} setLanguage={setLanguage}/>}/>
         </Routes>
     </Router>
   );
