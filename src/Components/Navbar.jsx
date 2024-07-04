@@ -131,7 +131,9 @@ export default function Navbar({ language, setLanguage }) {
                   </div>
                 </div>
               </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+              <div className={`absolute inset-y-0 ${
+                  language === "AR" ? "left-0" : "right-0"
+                } flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0`}>
                 <Menu as="div" className="relative ml-3">
                   <div className="flex items-center gap-3">
                     <MenuButton className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
@@ -144,7 +146,9 @@ export default function Navbar({ language, setLanguage }) {
                     </MenuButton>
                     <div className="text-gray-300 font-bold">{language}</div>
                   </div>
-                  <MenuItems className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <MenuItems className={`absolute  z-10 mt-2 w-48 origin-top-right ${
+                  language === "AR" ? "left-0" : "right-0"
+                }  rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none`}>
                     <MenuItem>
                       {({ active }) => (
                         <button

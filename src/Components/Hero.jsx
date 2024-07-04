@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -11,7 +11,10 @@ import "swiper/css/navigation";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import image from "../assets/Teknofab-End-of-line.jpg";
 
-export default function Hero() {
+export default function Hero({language}) {
+
+    
+
     return (
         <Swiper
             spaceBetween={30}
@@ -20,6 +23,9 @@ export default function Hero() {
                 delay: 2500,
                 disableOnInteraction: false,
             }}
+            dir={
+                language === "en" ? "ltr" : "ltr"
+            }
             pagination={{
                 clickable: true,
             }}
