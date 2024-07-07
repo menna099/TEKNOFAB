@@ -16,7 +16,7 @@ export default function Services({ language }) {
     <>
       <div className="services py-10 ">
         <div className="px-5 sm:px-8 lg:px-8">
-          <div className="services-heading-container mb-10">
+          <div className="services-heading-container mb-10" data-aos="zoom-in">
             <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
               {language === "AR"
                 ? ` خدماتنـــا `
@@ -25,7 +25,7 @@ export default function Services({ language }) {
                 : "Hizmetlerimiz"}
             </h1>
           </div>
-          <p className="services-desc text-white text-center">
+          <p className="services-desc text-white text-center" data-aos="zoom-in">
             {language === "AR"
               ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
               : language === "EN"
@@ -35,7 +35,7 @@ export default function Services({ language }) {
           <div className="services-items  lg:columns-3 sm:columns-2 gap-5 text-center mt-10">
             <div
               className="item p-4 rounded-lg bg-white mb-5 text-center animation"
-              data-aos="fade-up"
+              data-aos="zoom-in"
             >
               <img src={Service1} alt="Service One" className="hvr-pop" />
               <h2 className="font-bold my-5">

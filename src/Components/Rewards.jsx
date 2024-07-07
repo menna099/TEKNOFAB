@@ -2,6 +2,11 @@ import React, { useEffect, useState } from "react";
 import { FaUtensils, FaSmileBeam, FaList, FaStar } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ImageProj from '../assets/1.png'
+import ImageCus from '../assets/2.png'
+import ImagePrizes from '../assets/3.png'
+import ImageCoun from '../assets/4.png'
+
 
 const CountUpAnimation = ({
   iconComponent,
@@ -48,7 +53,7 @@ export default function Rewards({ language }) {
   return (
     <div className="rewards py-10 ">
       <div className="px-5 sm:px-8 lg:px-8">
-        <div className="rewards-heading-container mb-10">
+        <div className="rewards-heading-container mb-10" data-aos="zoom-in">
           <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
             {language === "AR"
               ? ` إنجازاتنا `
@@ -57,37 +62,37 @@ export default function Rewards({ language }) {
               : "Ödüllerimiz"}
           </h1>
         </div>
-        <p className="rewards-desc text-center text-white">
+        <p className="rewards-desc text-center text-white" data-aos="zoom-in">
           {language === "AR"
             ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
             : language === "EN"
             ? `We always care about our customers' business, we provide quality service and the best solutions for your business. Thanks to the latest technology and automation of development processes, we offer the speed and quality of development.`
             : "Müşterilerimizin işini her zaman önemsiyor, kaliteli hizmet ve işletmeniz için en iyi çözümleri sunuyoruz. En son teknoloji ve geliştirme süreçlerinin otomasyonu sayesinde, geliştirmenin hızını ve kalitesini sunuyoruz."}
         </p>
-        <div className="wrapper sm:columns-2 text-center gap-5 mt-10">
+        <div className="wrapper sm:columns-2 text-center gap-5 mt-10" data-aos="zoom-in">
           <CountUpAnimation
-            iconComponent={<FaUtensils />}
+          iconComponent={<img src={ImageProj}  className="w-24 h-24"/>}
             initialValue={0}
             targetValue={150}
-            text="Meals Delivered"
+            text="Projects"
           />
           <CountUpAnimation
-            iconComponent={<FaSmileBeam />}
+            iconComponent={<img src={ImageCus}  className="w-24 h-24"/>}
             initialValue={0}
             targetValue={200}
-            text="Happy Customers"
+            text="Customers"
           />
           <CountUpAnimation
-            iconComponent={<FaList />}
+            iconComponent={<img src={ImagePrizes}   className="w-24 h-24"/>}
             initialValue={0}
             targetValue={250}
-            text="Menu Items"
+            text="Prizes"
           />
           <CountUpAnimation
-            iconComponent={<FaStar />}
+            iconComponent={<img src={ImageCoun} className="w-24 h-24" />}
             initialValue={0}
             targetValue={300}
-            text="Five Stars"
+            text="Countries"
           />
         </div>
       </div>

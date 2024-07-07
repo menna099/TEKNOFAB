@@ -5,7 +5,7 @@ import ScrollToTop from "react-scroll-to-top";
 export default function Icons() {
   return (
     <>
-      <ScrollToTop smooth className="hvr-pulse" />
+      <ScrollToTop smooth className="hvr-pulse bg-SecondColor" />
       <a
         className="whats hvr-pulse"
         target="_blank"

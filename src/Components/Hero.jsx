@@ -31,27 +31,31 @@ export default function Hero({language}) {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper"
+            className="mySwiper py-10"
+            
         >
             <SwiperSlide>
                 <img
-                    className="object-fill w-full h-96"
+                    className="object-fill  w-3/4  mx-auto rounded-lg"
                     src={image}
                     alt="Slide 1"
+                    data-aos="zoom-in"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <img
-                    className="object-fill w-full h-96"
+                    className="object-fill  w-3/4  mx-auto rounded-lg"
                     src={image}
                     alt="Slide 2"
+                    data-aos="zoom-in"
                 />
             </SwiperSlide>
             <SwiperSlide>
                 <img
-                    className="object-fill w-full h-96"
+                    className="object-fill w-3/4  mx-auto rounded-lg"
                     src={image}
                     alt="Slide 3"
+                    data-aos="zoom-in"
                 />
             </SwiperSlide>
         </Swiper>

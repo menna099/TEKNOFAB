@@ -11,7 +11,7 @@ export default function AboutVideo({ language }) {
               {language === "AR"
                 ? `من نحن ؟`
                 : language === "EN"
-                ? `Who Are You ?`
+                ? `Who Are We ?`
                 : "Kimsin ?"}
             </h1>
           </div>

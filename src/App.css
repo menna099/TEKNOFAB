@@ -11,6 +11,7 @@ body {
 }
 .about-heading-container,
 .services-heading-container,
+.contact-heading-container,
 .rewards-heading-container,
 .tabs-heading-container,
 .aboutvideo-heading-container,
@@ -22,7 +23,7 @@ body {
   content: "";
   height: 2px;
   width: 400px;
-  background-color: #ffffff;
+  background-color: #2c3f2d;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -40,23 +41,17 @@ body {
 }
 
 .about-content img {
-  width: 50%;
-  border: 2px solid #fff;
-  margin: 30px auto;
-  border-radius: 10px;
+  margin: auto;
 }
 .About {
-  background-image: url("../src/assets/two.png");
+  background-image: url("../src/assets/bgg.png");
   background-size: cover;
   background-attachment: fixed;
 }
 .about-btn {
-  background: #ee4e4e !important;
   transition: 0.5s ease-in-out;
 }
-.about-btn:hover {
-  background: #77797b !important;
-}
+
 .services .item img {
   width: 70px;
   margin: auto;
@@ -67,7 +62,7 @@ body {
   transition: 0.5s ease-in-out;
 }
 .services {
-  background-image: url("../src/assets/three.png");
+  background-image: url("../src/assets/bgg.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -76,7 +71,7 @@ body {
   transition: 0.5s ease-in-out;
 }
 .services-desc {
-  color: white;
+  color: #2c3f2d !important;
 }
 .services .item::after {
   content: "";
@@ -101,7 +96,7 @@ body {
 }
 
 .rewards {
-  background-image: url("../src/assets/one.png");
+  background-image: url("../src/assets/bg\ 2.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -121,7 +116,7 @@ body {
   transition: 0.5s ease-in-out;
 }
 .item_count .num {
-  background: #ee4e4e;
+  background: #7bad41;
   color: white;
   padding: 8px 30px;
   border-radius: 10px;
@@ -143,7 +138,7 @@ body {
 }
 .item_count .text:hover {
   color: white !important;
-  background: #7bad41;
+  background: #2c3f2d ;
 }
 .item_count .icon:hover {
   color: #ee4e4e;
@@ -162,7 +157,7 @@ body {
   background: #7bad41;
 }
 .AboutVideo {
-  background-image: url("../src/assets/four.png");
+  background-image: url("../src/assets/bg\ 2.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -181,7 +176,7 @@ body {
   color: white;
 }
 .tabs {
-  background-image: url("../src/assets/five.png");
+  background-image: url("../src/assets/bgg.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -296,8 +291,51 @@ body {
 } */
 
 .contact {
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M0%2c387.762C74.67%2c394.237%2c150.486%2c372.778%2c212.957%2c331.367C274.95%2c290.273%2c315.61%2c225.899%2c346.351%2c158.173C377.037%2c90.567%2c409.488%2c15.392%2c388.734%2c-55.892C368.502%2c-125.383%2c291.746%2c-157.39%2c239.804%2c-207.791C193.127%2c-253.084%2c159.688%2c-313.749%2c98.97%2c-337.061C36.016%2c-361.232%2c-32.232%2c-345.582%2c-99.235%2c-337.963C-179.839%2c-328.797%2c-269.935%2c-339.791%2c-332.383%2c-288.011C-397.039%2c-234.4%2c-437.29%2c-145.922%2c-431.93%2c-62.102C-426.762%2c18.722%2c-350.302%2c72.142%2c-305.058%2c139.315C-268.105%2c194.178%2c-241.762%2c254.611%2c-190.473%2c296.382C-134.742%2c341.77%2c-71.606%2c381.552%2c0%2c387.762' fill='%230b2239'%3e%3c/path%3e%3cpath d='M1440 1166.44C1554.128 1154.953 1667.252 1125.048 1758.286 1055.262 1845.271 988.5799999999999 1897.47 889.102 1935.752 786.402 1971.983 689.204 1987.2150000000001 586.114 1971.375 483.6 1955.647 381.81100000000004 1915.196 284.503 1846.362 207.885 1778.253 132.07299999999998 1680.445 99.10500000000002 1587.798 56.64499999999998 1479.199 6.874000000000024 1375.764-77.81799999999998 1257.347-62.059999999999945 1134.884-45.76400000000001 1017.764 33.64700000000005 956.107 140.704 897.048 243.25099999999998 949.629 370.19399999999996 940.453 488.176 932.052 596.188 881.607 698.669 904.473 804.567 930.5509999999999 925.3430000000001 975.3140000000001 1054.585 1077.691 1123.7640000000001 1180.531 1193.2559999999999 1316.506 1178.87 1440 1166.44' fill='%23113255'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e") !important;
+  background-image: url("../src/assets/bgg.png");
   overflow: hidden;
   background-size: cover;
   background-attachment: fixed;
+}
+.navbar{
+  background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
+
+}
+.mySwiper{
+  background-image: url("../src/assets/bgg.png");
+}
+.swiper-button-prev{
+  margin-left: 30px;
+  color:#000;
+}
+.swiper-button-next{
+  margin-right: 30px;
+  color:#000;
+}
+.swiper-button-next::after{
+  font-size: 30px;
+}
+.swiper-button-prev::after{
+  font-size: 30px;
+}
+@media (max-width:767px) {
+  .swiper-button-prev{
+    margin-left: 0;
+    color:#000;
+  }
+  .swiper-button-next{
+    margin-right: 0;
+    color:#000;
+  }
+  .swiper-button-next::after{
+    font-size: 20px;
+  }
+  .swiper-button-prev::after{
+    font-size: 20px;
+  }
+}
+input::placeholder{
+  color: #eee !important;
+}
+textarea::placeholder{
+  color: #eee !important;
 }

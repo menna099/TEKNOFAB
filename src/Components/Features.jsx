@@ -83,7 +83,7 @@ export default function Features({ language }) {
           </h1>
         </div>
         <p
-          className="tabs-desc text-center text-white mb-10"
+          className="tabs-desc text-center text-black mb-10"
           data-aos="zoom-in"
         >
           {language === "AR"
