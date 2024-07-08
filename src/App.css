@@ -293,12 +293,6 @@ body {
 }
 
 
-
-/* .cards .item:hover h5,
-.cards .item:hover p {
-  color: white;
-} */
-
 .contact {
   background-image: url("../src/assets/bgg.png");
   overflow: hidden;
@@ -362,4 +356,7 @@ textarea::placeholder{
 
 html[dir="rtl"] .contact-text svg{
   margin-left:15px ;
+}
+.swiper-pagination span{
+  background-color: #7bad41;
 }

@@ -12,7 +12,9 @@ const Contact = ({ language, setLanguage }) => {
       }, []);
 
     const [formState, setFormState] = useState({
+        name: "",
         email: "",
+        phone: "",
         subject: "",
         message: "",
     });
@@ -40,7 +42,9 @@ const Contact = ({ language, setLanguage }) => {
                 () => {
                     setMsg("Email Sent");
                     setFormState({
+                        name: "",
                         email: "",
+                        phone: "",
                         subject: "",
                         message: "",
                     });
@@ -69,10 +73,10 @@ const Contact = ({ language, setLanguage }) => {
                     </div>
                     <p className="text-black text-center">
                         {language === "AR"
-                            ? `هل لديك مشكلة فنية؟ هل تريد إرسال تعليقات حول إحدى الميزات التجريبية؟ هل تحتاج إلى تفاصيل حول خطة أعمالنا؟ دعنا نعرف.`
+                            ? `يرجى ملء النموذج أدناه للاتصال بك وتزويدك بمجموعة واسعة من المعلومات حول منتجاتنا وأسئلتك المتعلقة بالمبيعات، بما في ذلك طلب عرض الأسعار الخاص بك.`
                             : language === "EN"
-                                ? `Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.`
-                                : "Teknik bir sorun mu var? Bir beta özelliği hakkında geri bildirim mi göndermek istiyorsunuz? İş planımızla ilgili ayrıntılara mı ihtiyacınız var? Bilmemize izin ver"}
+                                ? `Please fill out the form below if you would like us to contact you with a wide range of information about our products and for any sales-related questions, including your request for a quote.`
+                                : "Ürünlerimiz hakkında geniş bir bilgi yelpazesi ile sizinle iletişime geçmemizi ve teklif talebiniz de dahil olmak üzere satışla ilgili sorularınız için lütfen aşağıdaki formu doldurun."}
                     </p>
                 </div>
            
@@ -94,6 +98,7 @@ const Contact = ({ language, setLanguage }) => {
                                         : language === "EN"
                                             ? `Fill in the form to start a conversation`
                                             : "Görüşme başlatmak için formu doldurun"}
+                                           
                                 </p>
 
                                 <div className="flex items-center pb-5 mt-8 text-gray-600 dark:text-gray-400">
@@ -102,8 +107,13 @@ const Contact = ({ language, setLanguage }) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
                                     <div className="ml-4 text-md tracking-wide font-semibold">
-                                        Şehremini Mah.
-                                        No: 9/A Fatih / İSTANBUL
+                                    {language === "AR"
+                                        ? ` Office(9), Building (3), El Batraa Mall, 10th of Ramadan, 44635 `
+                                        : language === "EN"
+                                            ? `Business Center, SPC Free Zone, Sharjah, UAE, 73111`
+                                            : `GÜZELYURT MAH. HARAMİDERE CAD. NO: 13 İÇ KAPI NO: 19
+                                    ESENYURT/ İSTANBUL 34488`}
+                                    
                                     </div>
                                 </div>
 
@@ -112,8 +122,12 @@ const Contact = ({ language, setLanguage }) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                                     </svg>
                                     <div className="ml-4 text-md tracking-wide font-semibold">
-                                        00905446546062 <br />
-                                        00201110122012
+                                    {language === "AR"
+                                        ? ` 0201110122012 `
+                                        : language === "EN"
+                                            ? `00971506015463`
+                                            : ` 00905446546062 `}
+                                       
                                     </div>
                                 </div>
 
@@ -122,7 +136,7 @@ const Contact = ({ language, setLanguage }) => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                     </svg>
                                     <div className="ml-4 text-md tracking-wide font-semibold ">
-                                        sales@teknofab.com.tr
+                                    sales@teknofab.com.tr
                                     </div>
                                 </div>
 
@@ -137,18 +151,36 @@ const Contact = ({ language, setLanguage }) => {
 
                             </div>
                             <form action="#" className="space-y-8 bg-white p-5 rounded-lg" onSubmit={handleSubmit}>
+                            <div>
+                                    <label htmlFor="name" className="block mb-2 text-sm font-medium text-black dark:text-black"> {language === "AR"
+                                        ? `الاسم`
+                                        : language === "EN"
+                                            ? `Your Name:`
+                                            : "adin:"}</label>
+                                    <input type="text" id="name" name="name" value={formState.name}
+                                        onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" required />
+                                </div>
                                 <div>
                                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-black dark:text-black"> {language === "AR"
                                         ? `بريدك الإلكتروني `
                                         : language === "EN"
                                             ? `Your Email:`
-                                            : "E-postanız"}</label>
+                                            : "E-postanız:"}</label>
                                     <input type="email" id="email" name="email" value={formState.email}
                                         onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" placeholder={language === "AR"
                                             ? ` name@gmail.com `
                                             : language === "EN"
                                                 ? `name@gmail.com`
                                                 : "isim@gmail.com"} required />
+                                </div>
+                                <div>
+                                    <label htmlFor="phone" className="block mb-2 text-sm font-medium text-black dark:text-black"> {language === "AR"
+                                        ? ` التليفون `
+                                        : language === "EN"
+                                            ? `Phone:`
+                                            : "Telefon:"}</label>
+                                    <input type="number" id="phone" name="phone" value={formState.phone}
+                                        onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" required />
                                 </div>
                                 <div>
                                     <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"> {language === "AR"
@@ -178,7 +210,7 @@ const Contact = ({ language, setLanguage }) => {
                                                 ? `Your Message`
                                                 : "Mesajın"}
                                     </label>
-                                    <textarea id="message" rows="6" name="message" value={formState.message}
+                                    <textarea id="message" rows="6" name="message" value={formState.message} required
                                         onChange={handleChange} className="block navbar p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-SecondColor-500 focus:border-SecondColor-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500" placeholder={language === "AR"
                                             ? `اترك تعليقك....`
                                             : language === "EN"

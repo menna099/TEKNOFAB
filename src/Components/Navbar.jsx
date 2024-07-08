@@ -16,25 +16,25 @@ import image from "../assets/language.jpeg";
 const initialNavigation = [
   {
     nameEn: "Home",
-    nameTr: "Evde",
+    nameTr: "ANASAYFA",
     nameAr: "الصفحة الرئيسية",
     to: "/",
   },
   {
     nameEn: "About",
-    nameTr: "Hakkinda",
+    nameTr: "HAKKIMIZDA",
     nameAr: "نبذة عننا",
     to: "/about",
   },
   {
-    nameEn: "Projects",
-    nameTr: "Projeler",
-    nameAr: "مشروعاتنا",
+    nameEn: "Solutions",
+    nameTr: "Çözümlerimiz",
+    nameAr: "الحلول",
     to: "/projects",
   },
   {
     nameEn: "Contact",
-    nameTr: "Temas Etmek",
+    nameTr: "İletişim",
     nameAr: "تواصل معنا",
     to: "/contact",
   },
@@ -87,9 +87,9 @@ export default function Navbar({ language, setLanguage }) {
             <div className="flex flex-shrink-0 items-center">
                   <img className="h-8 w-auto" src={logo} alt="Your Company" />
                 </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-center">
+              <div className={`flex flex-1 items-center justify-center `}>
                 
-                <div className="absolute inset-y-0 flex items-center sm:hidden">
+                <div className="absolute inset-y-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
                 <DisclosureButton className="relative inline-flex items-center justify-center rounded-md p-2 text-black hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="sr-only">Open main menu</span>
@@ -100,8 +100,8 @@ export default function Navbar({ language, setLanguage }) {
                   )}
                 </DisclosureButton>
               </div>
-                <div className="hidden sm:block sm:ml-6">
-                  <div className="flex gap-4">
+                <div className="hidden md:block ">
+                  <div className="flex gap-2">
                     {navigation.map((item) => {
                       let itemName;
                       if (language === "EN") {
@@ -139,7 +139,7 @@ export default function Navbar({ language, setLanguage }) {
                     <MenuButton className="flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                       <span className="sr-only">Open user menu</span>
                       <img
-                        className="h-8 w-8 rounded-full "
+                        className="h-7 w-7 rounded-full "
                         src={image}
                         alt=""
                       />
@@ -213,8 +213,8 @@ export default function Navbar({ language, setLanguage }) {
                     href={item.to}
                     className={classNames(
                       item.current
-                        ? "bg-gray-900 text-white"
-                        : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                        ? "bg-SecondColor text-white"
+                        : "text-black hover:bg-SecondColor hover:text-white",
                       "block rounded-md px-3 py-2 text-base font-medium"
                     )}
                     aria-current={item.current ? "page" : undefined}
