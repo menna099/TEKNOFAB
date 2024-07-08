@@ -2,6 +2,7 @@
 body {
   font-family: "Cairo", sans-serif !important;
 }
+
 .Heading-title {
   width: 300px;
   margin-left: auto;
@@ -51,6 +52,14 @@ body {
 .about-btn {
   transition: 0.5s ease-in-out;
 }
+@media (max-width:1022px) {
+  .about-btn {
+    margin: auto;
+  }
+  .about-content{
+    text-align: center;
+  }
+}
 
 .services .item img {
   width: 70px;
@@ -96,7 +105,7 @@ body {
 }
 
 .rewards {
-  background-image: url("../src/assets/bg\ 2.png");
+  background-image: url("../src/assets/bgg2.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -157,7 +166,7 @@ body {
   background: #7bad41;
 }
 .AboutVideo {
-  background-image: url("../src/assets/bg\ 2.png");
+  background-image: url("../src/assets/bgg2.png");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -206,10 +215,10 @@ body {
 
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
+  bottom: 25px;
   right: 20px;
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   display: block;
   background-color: #ee4e4e;
   color: #fff;
@@ -219,12 +228,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
+  font-size: 10px;
   transition: all 0.5s eas-in-out;
   z-index: 998;
 }
 .scroll-to-top svg {
-  width: 20px !important;
+  width: 10px !important;
   fill: white !important;
   font-weight: bold;
 }
@@ -267,7 +276,7 @@ body {
   z-index: -1;
 }
 .feature-item svg {
-  fill: #ee4e4e !important;
+  fill: #000 !important;
   font-size: 50px;
   margin-bottom: 10px;
 }
@@ -338,4 +347,19 @@ input::placeholder{
 }
 textarea::placeholder{
   color: #eee !important;
+}
+@media (max-width:767px) {
+  footer{
+    text-align: center;
+  }
+  form{
+    text-align: center;
+  }
+  .btn-form{
+    margin: auto;
+  }
+}
+
+html[dir="rtl"] .contact-text svg{
+  margin-left:15px ;
 }

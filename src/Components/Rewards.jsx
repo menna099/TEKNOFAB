@@ -62,7 +62,7 @@ export default function Rewards({ language }) {
               : "Ödüllerimiz"}
           </h1>
         </div>
-        <p className="rewards-desc text-center text-white" data-aos="zoom-in">
+        <p className="rewards-desc text-center text-black" data-aos="zoom-in">
           {language === "AR"
             ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
             : language === "EN"

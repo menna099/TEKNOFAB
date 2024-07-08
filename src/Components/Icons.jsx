@@ -1,11 +1,27 @@
-import React from "react";
+import React, { useState ,useEffect} from "react";
 import { IoLogoWhatsapp } from "react-icons/io";
-import ScrollToTop from "react-scroll-to-top";
+import { HiArrowUp } from "react-icons/hi";
 
 export default function Icons() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    // Add the scroll event listener
+    window.addEventListener('scroll', function(){
+      if (window.scrollY > 300) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    });
+    
+  }, []);
   return (
     <>
-      <ScrollToTop smooth className="hvr-pulse bg-SecondColor" />
       <a
         className="whats hvr-pulse"
         target="_blank"
@@ -14,6 +30,12 @@ export default function Icons() {
       >
         <IoLogoWhatsapp />
       </a>
+      {isVisible && (
+        <HiArrowUp 
+          className="hvr-pulse bg-SecondColor text-white rounded-full scroll-to-top" 
+          onClick={handleClick} 
+        />
+      )}
     </>
   );
 }

@@ -80,7 +80,7 @@ const Contact = ({ language, setLanguage }) => {
                 <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
                     <div className="mt-5 overflow-hidden">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">
-                            <div className="p-6 mr-2 bg-gray-100 dark:bg-white sm:rounded-lg">
+                            <div className="p-6 contact-text mr-2 bg-gray-100 dark:bg-white rounded-lg">
                                 <h1 className="text-3xl sm:text-3xl text-gray-800 dark:text-black text-center font-extrabold tracking-tight">
                                     {language === "AR"
                                         ? ` تواصل معنا `
@@ -88,7 +88,7 @@ const Contact = ({ language, setLanguage }) => {
                                             ? `Get in Touch`
                                             : "Temasta olmak"}
                                 </h1>
-                                <p className="text-normal text-lg sm:text-xl font-medium text-gray-600 dark:text-black mt-2">
+                                <p className="text-center text-lg sm:text-xl font-medium text-gray-600 dark:text-black mt-2">
                                     {language === "AR"
                                         ? ` املأ النموذج لبدء محادثة  `
                                         : language === "EN"
@@ -96,13 +96,13 @@ const Contact = ({ language, setLanguage }) => {
                                             : "Görüşme başlatmak için formu doldurun"}
                                 </p>
 
-                                <div className="flex items-center mt-8 text-gray-600 dark:text-gray-400">
+                                <div className="flex items-center pb-5 mt-8 text-gray-600 dark:text-gray-400">
                                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" viewBox="0 0 24 24" className="w-8 h-8 text-black">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                     </svg>
-                                    <div className="ml-4 pb-5 text-md tracking-wide font-semibold">
-                                        Şehremini Mah. Velet Çelebi Caddesi. <br />
+                                    <div className="ml-4 text-md tracking-wide font-semibold">
+                                        Şehremini Mah.
                                         No: 9/A Fatih / İSTANBUL
                                     </div>
                                 </div>
@@ -185,7 +185,7 @@ const Contact = ({ language, setLanguage }) => {
                                                 ? `Leave a comment...`
                                                 : "Bir yorum bırakın..."}></textarea>
                                 </div>
-                                <button type="submit" className="py-3 hvr-grow px-5 text-sm  bg-SecondColor font-medium text-center text-white rounded-lg  sm:w-fit  focus:ring-4 focus:outline-none focus:ring-SecondColor-300  dark:focus:ring-SecondColor-800">
+                                <button type="submit" className="btn-form py-3 hvr-grow px-5 text-sm  bg-SecondColor font-medium text-center text-white rounded-lg  sm:w-fit  focus:ring-4 focus:outline-none focus:ring-SecondColor-300  dark:focus:ring-SecondColor-800">
                                     {language === "AR"
                                         ? `ارسال`
                                         : language === "EN"

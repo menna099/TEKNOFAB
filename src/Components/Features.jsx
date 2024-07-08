@@ -96,7 +96,7 @@ export default function Features({ language }) {
           {featuresArr.map((ele) => {
             return (
               <>
-                <div className="feature-item mb-5" data-aos="zoom-in">
+                <div className="feature-item mb-5" data-aos="zoom-in" key={ele.featureId}>
                   {ele.featureIcon}
                   <h1 className="feature-heading hvr-wobble-horizontal">
                     {language === "AR"
