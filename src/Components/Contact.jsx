@@ -225,7 +225,7 @@ const Contact = ({ language, setLanguage }) => {
                                                 ? `Your Name:`
                                                 : "adin:"}</label>
                                         <input type="text" id="name" name="name" value={formState.name}
-                                            onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" required />
+                                            onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-black text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" required />
                                     </div>
                                     <div>
                                         <label htmlFor="email" className="block mb-2 text-sm font-medium text-black dark:text-black"> {language === "AR"
@@ -234,7 +234,7 @@ const Contact = ({ language, setLanguage }) => {
                                                 ? `Your Email:`
                                                 : "E-postanız:"}</label>
                                         <input type="email" id="email" name="email" value={formState.email}
-                                            onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" placeholder={language === "AR"
+                                            onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" placeholder={language === "AR"
                                                 ? ` name@gmail.com `
                                                 : language === "EN"
                                                     ? `name@gmail.com`
@@ -247,7 +247,7 @@ const Contact = ({ language, setLanguage }) => {
                                                 ? `Phone:`
                                                 : "Telefon:"}</label>
                                         <input type="number" id="phone" name="phone" value={formState.phone}
-                                            onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" required />
+                                            onChange={handleChange} className="shadow-sm navbar border border-gray-300 text-white text-sm rounded-lg focus:ring-SecondColor-500 focus:border-SecondColor-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light" required />
                                     </div>
                                     <div>
                                         <label htmlFor="subject" className="block mb-2 text-sm font-medium text-gray-900 dark:text-black"> {language === "AR"
@@ -261,7 +261,7 @@ const Contact = ({ language, setLanguage }) => {
                                             name="subject"
                                             value={formState.subject}
                                             onChange={handleChange}
-                                            className="block p-3 w-full navbar text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-SecondColor-500 focus:border-SecondColor-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light"
+                                            className="block p-3 w-full navbar text-sm text-black bg-gray-50 rounded-lg border border-gray-300 shadow-sm focus:ring-SecondColor-500 focus:border-SecondColor-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500 dark:shadow-sm-light"
                                             placeholder={language === "AR"
                                                 ? `اخبرنا كيف  يمكننا مساعدتك `
                                                 : language === "EN"
@@ -278,7 +278,7 @@ const Contact = ({ language, setLanguage }) => {
                                                     : "Mesajın"}
                                         </label>
                                         <textarea id="message" rows="6" name="message" value={formState.message} required
-                                            onChange={handleChange} className="block navbar p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-SecondColor-500 focus:border-SecondColor-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500" placeholder={language === "AR"
+                                            onChange={handleChange} className="block navbar p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-SecondColor-500 focus:border-SecondColor-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-SecondColor-500 dark:focus:border-SecondColor-500" placeholder={language === "AR"
                                                 ? `اترك تعليقك....`
                                                 : language === "EN"
                                                     ? `Leave a comment...`
