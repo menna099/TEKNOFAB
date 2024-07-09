@@ -16,7 +16,9 @@ body {
 .rewards-heading-container,
 .tabs-heading-container,
 .aboutvideo-heading-container,
-.tabs-heading-container {
+.tabs-heading-container,
+.robot-heading-container,
+.packing-heading-container {
   position: relative;
   z-index: 2;
 }
@@ -44,7 +46,9 @@ body {
 .about-content img {
   margin: auto;
 }
-.About {
+.About,
+.robot_palletizers,
+.packing_machines {
   background-image: url("../src/assets/bgg.png");
   background-size: cover;
   background-attachment: fixed;
@@ -359,4 +363,66 @@ html[dir="rtl"] .contact-text svg{
 }
 .swiper-pagination span{
   background-color: #7bad41;
+}
+li {
+  list-style: none !important;
+}
+
+.robot_item,
+.packing_item {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  position: relative;
+}
+.robot_item_heading,
+.packing_item_heading {
+  font-size: 35px;
+}
+.robot_item img {
+  width: 338px;
+  margin: auto;
+}
+@media (max-width: 350px) {
+  .robot_item img {
+    width: 200px;
+  }
+}
+.robot_item_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.robot_item_overlay a {
+  background-color: #7bad41;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.robot_item_overlay a:hover {
+  background: white;
+  color: black;
+}
+.robot_item:hover .robot_item_overlay {
+  height: 100%;
+}
+
+@media (max-width: 991px) {
+  .packing_item_details {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .packing_item_details img {
+    margin: auto;
+  }
+}
+.pack-video-container video {
+  border: 5px solid #7bad41;
 }

@@ -5,6 +5,8 @@ import About from './Components/About';
 import Home from './Components/Home';
 import './App.css';
 import ProductDetails from './Components/ProductDetails';
+import RobotPalletizers from './Components/RobotPalletizers';
+import PackingMachines from './Components/PackingMachines';
 
 function App() {
   const [language, setLanguage] = useState(() => localStorage.getItem('language') || 'EN');
@@ -20,6 +22,8 @@ function App() {
         <Route path="/about" element={<About language={language} setLanguage={setLanguage}/>} />
         <Route path="/contact" element={<Contact language={language} setLanguage={setLanguage}/>} />
         <Route path='/productdetails' element={<ProductDetails language={language} setLanguage={setLanguage}/>}/>
+        <Route path='/robot-palletizers' element={<RobotPalletizers language={language} setLanguage={setLanguage}/>}/>
+        <Route path='/packing-machines' element={<PackingMachines language={language} setLanguage={setLanguage}/>}/>
         </Routes>
     </Router>
   );
