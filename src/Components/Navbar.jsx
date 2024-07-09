@@ -30,13 +30,14 @@ const initialNavigation = [
     nameEn: "Solutions",
     nameTr: "Çözümlerimiz",
     nameAr: "الحلول",
-    to: "#",
+    to: "",
     subItems: [
-      { nameEn: "Robot Palletizers", nameTr: "Robot Palletizers", nameAr: "روبوتات التكديس", to: "/robot-palletizers" },
-      { nameEn: "Robot Packing", nameTr: "Robot Packing", nameAr: "التغليف الآلي", to: "/robot-packing" },
-      { nameEn: "Packing Machines", nameTr: "Packing Machines", nameAr: "آلات التعبئة", to: "/packing-machines" },
+      { nameEn: "Robot Palletizers", nameTr: "Robot Paletleyiciler", nameAr: "روبوتات التكديس", to: "/robot-palletizers" },
+      { nameEn: "Robot Packing", nameTr: "Robot Paketleme", nameAr: "التغليف الآلي", to: "/robot-packing" },
+      { nameEn: "Packing Machines", nameTr: "Paketleme Makinaları", nameAr: "آلات التعبئة", to: "/packing-machines" },
     ],
   },
+  
   {
     nameEn: "Contact",
     nameTr: "İletişim",
