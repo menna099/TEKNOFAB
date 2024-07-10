@@ -2,3 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    background-image: url("../src/assets/bgg.png");
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.slick-slide>div {
+  margin: 0 10px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #7bad41 !important;
+}
