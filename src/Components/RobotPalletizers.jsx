@@ -8,9 +8,6 @@ import Robot_One from "../assets/Robot_1.webp";
 import Robot_Two from "../assets/Robot_2.webp";
 import Robot_Three from "../assets/Robot_3.webp";
 import Robot_Four from "../assets/Robot_4.png";
-import EC_102 from "../assets/EC-102 pdf.pdf";
-import EC_171 from "../assets/EC171 pdf.pdf";
-import EC_201 from "../assets/EC201 pdf.pdf";
 import { Link } from "react-router-dom";
 
 export default function RobotPalletizers({ language, setLanguage }) {
