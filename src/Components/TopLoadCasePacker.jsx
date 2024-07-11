@@ -7,6 +7,7 @@ import Icons from "./Icons";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Link } from "react-router-dom";
+import topleader from "../assets/top leader.png"
 
 const TopLoadCasePacker = ({ language, setLanguage }) => {
     useEffect(() => {
@@ -22,12 +23,12 @@ const TopLoadCasePacker = ({ language, setLanguage }) => {
             TOP LOAD CASE PACKER
             </h1>
           </div>
-          <div className="robot_about mb-10 flex gap-10 items-center w-11/12 m-auto" data-aos="zoom-in">
+          <div className="robot_about mb-10 flex items-center w-11/12 m-auto" data-aos="zoom-in">
             <div className="robot_desc flex-1" data-aos="zoom-in">
               <h1 className="robot_about_heading text-3xl">MAX. CAPACITY: 8-16 PACKS / MİNUTE</h1>
             </div>
             <div className="about_robot_img text-center" data-aos="zoom-in">
-              <img src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/cp450_tl-web-sitesi-icin.png" alt="Robot" className="w-96 hvr-pop" />
+              <img src={topleader} alt="Robot" className="w-96 hvr-pop" />
             </div>
             </div> 
            {/*  */}
