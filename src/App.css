@@ -377,7 +377,6 @@ li {
 .robot_item_heading,
 .packing_item_heading {
   font-size: 35px;
-  color: #7bad41 !important;
 }
 .robot_item img {
   /* width: 300px !important; */
@@ -534,4 +533,8 @@ li {
 .react-tabs__tab-panel p::before {
   content: "»";
   margin-right: 7px;
+}
+input:focus,textarea:focus{
+  box-shadow: none !important ;
+  border: 2px solid #7bad41 !important;
 }

@@ -29,7 +29,7 @@ export default function PackingMachines({ language, setLanguage }) {
             </h1>
           </div>
           <p
-            className="packing-desc text-black text-center mb-10"
+            className="packing-desc text-black text-center mb-10 w-11/12 m-auto"
             data-aos="zoom-in"
           >
             {language === "AR"
@@ -38,7 +38,7 @@ export default function PackingMachines({ language, setLanguage }) {
               ? `They form, fill, seal, wrap, clean, and package at different levels of automation. These machines are essential across various industries such as food, beverage, pharmaceutical, and consumer goods.`
               : "Farklı otomasyon seviyelerinde şekillendirir, doldurur, mühürler, sarar, temizler ve paketler. Bu makineler yiyecek, içecek, ilaç ve tüketim malları gibi çeşitli endüstrilerde gereklidir."}
           </p>
-          <div className="packing_container">
+          <div className="packing_container  w-11/12 m-auto">
             <div
               className="packing_item p-5 rounded-lg gap-4 mb-5 "
               data-aos="zoom-in"
@@ -49,7 +49,7 @@ export default function PackingMachines({ language, setLanguage }) {
               >
                 <div className="packing_item_desc" data-aos="zoom-in">
                   <h1
-                    className="packing_item_heading text-white mb-3 font-extrabold"
+                    className="packing_item_heading dark:text-white mb-3 font-extrabold"
                     data-aos="zoom-in"
                   >
                     {language === "AR"
@@ -59,7 +59,7 @@ export default function PackingMachines({ language, setLanguage }) {
                       : "Torba Paletleme"}
                   </h1>
                   <p
-                    className="packing_item_text text-gray-200"
+                    className="packing_item_text text-gray-50"
                     data-aos="zoom-in"
                   >
                     {language === "AR"
@@ -104,7 +104,7 @@ export default function PackingMachines({ language, setLanguage }) {
                       : "Koli Paletleme"}
                   </h1>
                   <p
-                    className="packing_item_text text-gray-200"
+                    className="packing_item_text text-gray-50"
                     data-aos="zoom-in"
                   >
                     {language === "AR"
@@ -151,7 +151,7 @@ export default function PackingMachines({ language, setLanguage }) {
                       : "Vakumlu Paletleme"}
                   </h1>
                   <p
-                    className="packing_item_text text-gray-200"
+                    className="packing_item_text text-gray-50"
                     data-aos="zoom-in"
                   >
                     {language === "AR"
@@ -198,7 +198,7 @@ export default function PackingMachines({ language, setLanguage }) {
                       : "Su Sürahileri Paletleme"}
                   </h1>
                   <p
-                    className="packing_item_text text-gray-200"
+                    className="packing_item_text text-gray-50"
                     data-aos="zoom-in"
                   >
                     {language === "AR"
