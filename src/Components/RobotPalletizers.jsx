@@ -61,7 +61,7 @@ export default function RobotPalletizers({ language, setLanguage }) {
                 : "Paletleme Robotları"}
             </h1>
           </div>
-          <div className="robot_about mb-10 flex gap-10 items-center w-3/4 m-auto" data-aos="zoom-in">
+          <div className="robot_about mb-10 flex gap-10 items-center w-11/12 m-auto" data-aos="zoom-in">
             <div className="robot_desc flex-1" data-aos="zoom-in">
               <h1 className="robot_about_heading font-extrabold text-xl">World's Leading</h1>
               <h1 className="robot_about_heading font-extrabold text-xl mb-4">Robotic Palletizer Manufacturer</h1>
@@ -75,7 +75,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
               <img src={Robot_One} alt="Robot" className="mx-auto hvr-pop" />
             </div>
             </div>                
-          <div className="robots_palletizers_container owl-carousel w-3/4 m-auto" data-aos="zoom-in" dir={
+          <div className="robots_palletizers_container owl-carousel w-11/12 m-auto" data-aos="zoom-in" dir={
                 language === "EN" ? "ltr" :language === "TR" ? "ltr" : "ltr"
             } >
             <div
@@ -187,7 +187,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
               className="robot_item robot-custom p-5 rounded-lg text-center"
               data-aos="zoom-in"
             >
-              <img src={Robot_Four} alt="robot_3" data-aos="zoom-in" className="h-60"/>
+              <img src={Robot_Four} alt="robot_3" data-aos="zoom-in" className="h-72"/>
               <div className="robot_item_desc" data-aos="zoom-in">
               <h4 className="robot_item_title text-sm text-black mb-2 font-extrabold">
               Heavy Payload Robotic Palletizer
@@ -230,7 +230,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                         </h1>
                     </div>
                     <p
-                        className="robot-video-desc text-black text-center mb-10 w-3/4 m-auto"
+                        className="robot-video-desc text-black text-center mb-10 w-11/12 m-auto"
                         data-aos="zoom-in"
                     >
                         We understand how End Effectors play an intricate role in successful robotic palletizing applications. Given this critical point, we have spent years developing and refining high quality and cost effective End Effectors. Below is a small example of our End Effector designs.
@@ -260,7 +260,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                         </h1>
                     </div>
                    
-                    <div className="flex gap-10 justify-center items-center flex-wrap w-3/4 m-auto" data-aos="zoom-in">
+                    <div className="flex gap-10 justify-center items-center flex-wrap w-11/12 m-auto" data-aos="zoom-in">
                         <div className="flex flex-col gap-2 items-center">
                           <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
                           <img src={icon8} alt="icon" className="hvr-pop" />
@@ -293,7 +293,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                         </div>                 
                   </div>
                     {/*  */}
-                    <div className="flex gap-10 justify-center items-center flex-wrap mt-5 w-3/4 m-auto" data-aos="zoom-in">
+                    <div className="flex gap-10 justify-center items-center flex-wrap mt-5 w-11/12 m-auto" data-aos="zoom-in">
                         <div className="flex flex-col gap-2 items-center">
                           <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
                           <img src={icon5} alt="icon" className="hvr-pop" />

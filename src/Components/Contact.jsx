@@ -71,7 +71,7 @@ const Contact = ({ language, setLanguage }) => {
                                     : "Bize Ulaşın"}
                         </h2>
                     </div>
-                    <p className="text-black text-center">
+                    <p className="text-black text-center w-11/12 m-auto">
                         {language === "AR"
                             ? `يرجى ملء النموذج أدناه للاتصال بك وتزويدك بمجموعة واسعة من المعلومات حول منتجاتنا وأسئلتك المتعلقة بالمبيعات، بما في ذلك طلب عرض الأسعار الخاص بك.`
                             : language === "EN"
@@ -80,7 +80,7 @@ const Contact = ({ language, setLanguage }) => {
                     </p>
                 </div>
 
-                <div className="relative flex items-top mt-0 justify-center min-h-screen  sm:items-center sm:pt-0" data-aos="zoom-in">
+                <div className="relative flex items-top mt-0 justify-center min-h-screen  sm:items-center sm:pt-0 w-11/12 m-auto" data-aos="zoom-in">
                     <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
                         <div className="mt-5 overflow-hidden">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-20">

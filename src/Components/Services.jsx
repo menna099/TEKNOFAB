@@ -25,14 +25,14 @@ export default function Services({ language }) {
                 : "Hizmetlerimiz"}
             </h1>
           </div>
-          <p className="services-desc text-white text-center" data-aos="zoom-in">
+          <p className="services-desc text-white text-center w-11/12 m-auto" data-aos="zoom-in">
             {language === "AR"
               ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
               : language === "EN"
               ? `We always care about our customers' business, we provide quality service and the best solutions for your business. Thanks to the latest technology and automation of development processes, we offer the speed and quality of development.`
               : "Müşterilerimizin işini her zaman önemsiyor, kaliteli hizmet ve işletmeniz için en iyi çözümleri sunuyoruz. En son teknoloji ve geliştirme süreçlerinin otomasyonu sayesinde, geliştirmenin hızını ve kalitesini sunuyoruz."}
           </p>
-          <div className="services-items  lg:columns-3 sm:columns-2 gap-5 text-center mt-10">
+          <div className="services-items  lg:columns-3 sm:columns-2 gap-5 text-center mt-10 w-11/12 m-auto">
             <div
               className="item p-4 rounded-lg bg-white mb-5 text-center animation"
               data-aos="zoom-in"

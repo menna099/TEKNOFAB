@@ -83,7 +83,7 @@ export default function Features({ language }) {
           </h1>
         </div>
         <p
-          className="tabs-desc text-center text-black mb-10"
+          className="tabs-desc text-center text-black mb-10 w-11/12 m-auto"
           data-aos="zoom-in"
         >
           {language === "AR"
@@ -92,7 +92,7 @@ export default function Features({ language }) {
             ? `We look forward to being the best and distinguished through a distinguished team and high-quality materials, so we provide high-quality services to ensure the success of the customer.`
             : "Seçkin bir ekip ve yüksek kaliteli malzemelerle en iyi ve seçkin olmayı dört gözle bekliyoruz, bu nedenle müşterinin başarısını sağlamak için yüksek kaliteli hizmetler sunuyoruz."}
         </p>
-        <div className="features-container gap-5 lg:columns-3 md:columns-2 text-center">
+        <div className="features-container gap-5 lg:columns-3 md:columns-2 text-center w-11/12 m-auto">
           {featuresArr.map((ele) => {
             return (
               <>

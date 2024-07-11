@@ -62,14 +62,14 @@ export default function Rewards({ language }) {
               : "Ödüllerimiz"}
           </h1>
         </div>
-        <p className="rewards-desc text-center text-black" data-aos="zoom-in">
+        <p className="rewards-desc text-center text-black w-11/12 m-auto" data-aos="zoom-in">
           {language === "AR"
             ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
             : language === "EN"
             ? `We always care about our customers' business, we provide quality service and the best solutions for your business. Thanks to the latest technology and automation of development processes, we offer the speed and quality of development.`
             : "Müşterilerimizin işini her zaman önemsiyor, kaliteli hizmet ve işletmeniz için en iyi çözümleri sunuyoruz. En son teknoloji ve geliştirme süreçlerinin otomasyonu sayesinde, geliştirmenin hızını ve kalitesini sunuyoruz."}
         </p>
-        <div className="wrapper sm:columns-2 text-center gap-5 mt-10" data-aos="zoom-in">
+        <div className="wrapper sm:columns-2 text-center gap-5 mt-10 w-11/12 m-auto" data-aos="zoom-in">
           <CountUpAnimation
           iconComponent={<img src={ImageProj}  className="w-24 h-24"/>}
             initialValue={0}

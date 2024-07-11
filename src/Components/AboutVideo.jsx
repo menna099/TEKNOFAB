@@ -15,7 +15,7 @@ export default function AboutVideo({ language }) {
                 : "Kimsin ?"}
             </h1>
           </div>
-          <p className="about-video-desc text-black text-center mb-10" data-aos="zoom-in">
+          <p className="about-video-desc text-black text-center mb-10 w-11/12 m-auto" data-aos="zoom-in">
             {language === "AR"
               ? `بناء الثقة والمصداقية حيث تسمح للزوار بفهم هوية ورؤية المؤسسة أو الشخص، مما يساهم في بناء الثقة والمصداقية بينك وبين الجمهور.`
               : language === "EN"

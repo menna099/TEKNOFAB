@@ -22,7 +22,7 @@ const TopLoadCasePacker = ({ language, setLanguage }) => {
             TOP LOAD CASE PACKER
             </h1>
           </div>
-          <div className="robot_about mb-10 flex gap-10 items-center w-3/4 m-auto" data-aos="zoom-in">
+          <div className="robot_about mb-10 flex gap-10 items-center w-11/12 m-auto" data-aos="zoom-in">
             <div className="robot_desc flex-1" data-aos="zoom-in">
               <h1 className="robot_about_heading text-3xl">MAX. CAPACITY: 8-16 PACKS / MİNUTE</h1>
             </div>
@@ -31,7 +31,7 @@ const TopLoadCasePacker = ({ language, setLanguage }) => {
             </div>
             </div> 
            {/*  */}
-           <Tabs data-aos="zoom-in" className="w-3/4 m-auto">
+           <Tabs data-aos="zoom-in" className="w-11/12 m-auto">
             <TabList >
               <Tab>General Advantages</Tab>
               <Tab>Technical Details</Tab>

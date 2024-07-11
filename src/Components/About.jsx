@@ -29,7 +29,7 @@ export default function About({ language,setLanguage }) {
                 : "hhHakkımızda"}
             </h1>
           </div>
-          <div className="about-content lg:columns-2">
+          <div className="about-content lg:columns-2 w-11/12 m-auto">
             
             <div className="about-desc mt-10" data-aos="zoom-in">
               <p className="text-black">
