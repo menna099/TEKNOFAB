@@ -35,6 +35,7 @@ const initialNavigation = [
       { nameEn: "Robot Palletizers", nameTr: "Robot Paletleyiciler", nameAr: "روبوتات التكديس", to: "/robot-palletizers" },
       { nameEn: "Robot Packing", nameTr: "Robot Paketleme", nameAr: "التغليف الآلي", to: "/robot-packing" },
       { nameEn: "Packing Machines", nameTr: "Paketleme Makinaları", nameAr: "آلات التعبئة", to: "/packing-machines" },
+      { nameEn: "Top Load Case Packer", nameTr: "TOP LOAD CASE PACKER", nameAr: "", to: "/case-packer" },
     ],
   },
   

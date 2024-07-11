@@ -380,8 +380,8 @@ li {
   color: #7bad41 !important;
 }
 .robot_item img {
-  width: 300px !important;
-  height: 298px !important;
+  /* width: 300px !important; */
+  /* height: 298px !important; */
   margin: 0 auto 20px ;
 }
 @media (max-width: 350px) {
@@ -444,9 +444,11 @@ li {
 }
 @media (min-width: 768px) {
   .robot_item{
-    height: 650px;
+    height: auto;
   }
+ 
 }
+
 [data-aos^=zoom][data-aos^=zoom].aos-animate{
   opacity: 1 !important;
     transform: translateZ(0) scale(1) !important;
@@ -457,4 +459,79 @@ li {
   text-align: center;
   flex-direction: column;
 }
+}
+
+/********************************/
+
+@media (max-width: 991px) {
+  .TopLoad_content {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 700px) {
+  .TopLoad_content p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .TopLoad_content p {
+    font-size: 25px;
+  }
+}
+@media (max-width: 400px) {
+  .TopLoad_content p {
+    font-size: 22px;
+  }
+}
+.react-tabs__tab-list {
+  gap: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 991px) {
+  .react-tabs__tab-list {
+    justify-content: center;
+  }
+  .react-tabs__tab-panel table {
+    margin: auto;
+    width: 100%;
+  }
+}
+.react-tabs__tab {
+  color: white;
+  font-weight: bold;
+  background-color: #a59c90;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+.react-tabs__tab--selected,
+.react-tabs__tab:hover {
+  background-color: #7bad41 !important;
+  color: white !important;
+  font-weight: bold;
+}
+.react-tabs__tab-panel {
+  background: white;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.topload-table,
+.topload-table tr,
+.topload-table td {
+  border: 1px solid #222;
+  padding: 10px;
+}
+@media (max-width: 767px) {
+  .react-tabs__tab-panel table td,
+  .react-tabs__tab-panel p {
+    font-size: 13px;
+  }
+}
+.react-tabs__tab-panel p::before {
+  content: "»";
+  margin-right: 7px;
 }

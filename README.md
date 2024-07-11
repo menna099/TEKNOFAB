@@ -124,3 +124,33 @@ Currently, two official plugins are available:
                         );
                       })} 
                   </div>
+
+                  {/* table */}
+           <table className="w-96 ">
+                        <tr className="bg-white ">
+                            <td scope="row" className="px-6 py-3 text-black border border-slate-600">
+                            Action Mode
+                            </td>
+                        </tr>
+                        <tr className="bg-white">
+                            <td scope="row" className="px-6 py-3 text-black border border-slate-600">
+                            Load Capacity(Including End Effector)
+                            </td>
+                        </tr>
+                        <tr className="bg-white">
+                            <td scope="row" className="px-6 py-3 text-black border border-slate-600">
+                            Load Capacity(Including End Effector)
+                            </td>
+                        </tr>
+                        <tr className="bg-white">
+                            <td scope="row" className="px-6 py-3 text-black border border-slate-600">
+                            Load Capacity(Including End Effector)
+                            </td>
+                        </tr>
+                        <tr className="bg-white">
+                            <td scope="row" className="px-6 py-3 text-black border border-slate-600">
+                            Load Capacity(Including End Effector)
+                            </td>
+                        </tr>
+                </table>
+           {/* end table */}

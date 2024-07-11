@@ -9,6 +9,16 @@ import Robot_Two from "../assets/Robot_2.webp";
 import Robot_Three from "../assets/Robot_3.webp";
 import Robot_Four from "../assets/Robot_4.png";
 import { Link } from "react-router-dom";
+import icon1 from "../assets/icons/1.png"
+import icon2 from "../assets/icons/2.png"
+import icon3 from "../assets/icons/3.png"
+import icon4 from "../assets/icons/4.png"
+import icon5 from "../assets/icons/5.png"
+import icon6 from "../assets/icons/6.png"
+import icon7 from "../assets/icons/7.png"
+import icon8 from "../assets/icons/8.png"
+import icon9 from "../assets/icons/9.png"
+import icon10 from "../assets/icons/10.png"
 
 export default function RobotPalletizers({ language, setLanguage }) {
   useEffect(() => {
@@ -51,7 +61,7 @@ export default function RobotPalletizers({ language, setLanguage }) {
                 : "Paletleme Robotları"}
             </h1>
           </div>
-          <div className="robot_about mb-10 flex gap-10 items-center" data-aos="zoom-in">
+          <div className="robot_about mb-10 flex gap-10 items-center w-3/4 m-auto" data-aos="zoom-in">
             <div className="robot_desc flex-1" data-aos="zoom-in">
               <h1 className="robot_about_heading font-extrabold text-xl">World's Leading</h1>
               <h1 className="robot_about_heading font-extrabold text-xl mb-4">Robotic Palletizer Manufacturer</h1>
@@ -65,27 +75,27 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
               <img src={Robot_One} alt="Robot" className="mx-auto hvr-pop" />
             </div>
             </div>                
-          <div className="robots_palletizers_container owl-carousel" data-aos="zoom-in" dir={
-                language === "en" ? "ltr" : "ltr"
+          <div className="robots_palletizers_container owl-carousel w-3/4 m-auto" data-aos="zoom-in" dir={
+                language === "EN" ? "ltr" :language === "TR" ? "ltr" : "ltr"
             } >
             <div
               className="robot_item p-5 rounded-lg text-center mb-5"
               data-aos="zoom-in"
             >
-              <img src={Robot_One} alt="robot_1" data-aos="zoom-in" />
+              <img src={Robot_One} alt="robot_1" data-aos="zoom-in" className=""/>
               <div className="robot_item_desc" data-aos="zoom-in">
-              <h4 className="robot_item_title text-black mb-2 font-extrabold">
+              <h4 className="robot_item_title text-sm text-black mb-2 font-extrabold">
               Low to Medium  Speed Robotic Palletizer
                 </h4>
                 <h1 className="robot_item_heading text-black mb-3 font-extrabold">
                   EC-102
                 </h1>
-                <p className="robot_item_text text-gray-700 mb-3">
-                  {language === "AR"
-                    ? `أحدث روبوت لدينا وأكثرها كفاءة ، EC-102 موجه لخطوط الإنتاج حيث تكون المساحة ضيقة أو بسرعات إخراج منخفضة إلى متوسطة.`
+                <p className="robot_item_text text-sm text-gray-700 mb-3" >
+                  {language === "TR"
+                    ?`En yeni ve en verimli robotumuz olan EC-102, alanın dar olduğu veya düşük-orta çıkış hızlarına sahip ürün serileri için tasarlanmıştır.` 
                     : language === "EN"
                     ? `The EC-102 model is one of our most energy-efficient robotic palletizers, as it uses only 3.5 KVA. Given the cycle rate-to-power ratio, it provides the most cost-effective, technically capable solution for moderate production throughput lines.`
-                    : "En yeni ve en verimli robotumuz olan EC-102, alanın dar olduğu veya düşük-orta çıkış hızlarına sahip ürün serileri için tasarlanmıştır."}
+                    : `أحدث روبوت لدينا وأكثرها كفاءة ، EC-102 موجه لخطوط الإنتاج حيث تكون المساحة ضيقة أو بسرعات إخراج منخفضة إلى متوسطة.`}
                 </p>
               </div>
 
@@ -93,7 +103,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                 <Link
                   className="robot_item_btn p-3 rounded-lg font-bold hvr-pulse"
                   to="/products-details"
-                  target="_blank"
+                  
                 >
                   {language === "AR"
                     ? `أقرأ المزيد`
@@ -109,13 +119,13 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
             >
               <img src={Robot_Two} alt="robot_2" data-aos="zoom-in" />
               <div className="robot_item_desc" data-aos="zoom-in">
-              <h4 className="robot_item_title text-black mb-2 font-extrabold">
+              <h4 className="robot_item_title text-sm text-black mb-2 font-extrabold">
               Medium to High Speed Robotic Palletizer
                 </h4>
                 <h1 className="robot_item_heading text-black mb-3 font-extrabold">
                   EC-171
                 </h1>
-                <p className="robot_item_text text-gray-700 mb-3">
+                <p className="robot_item_text text-sm text-gray-700 mb-3">
                   {language === "AR"
                     ? `يحتوي EC-171 على أكبر غلاف عمل وهو مصمم للعمليات ذات الإخراج المتوسط والتخطيطات التي تتطلب مدى أبعد.`
                     : language === "EN"
@@ -128,7 +138,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                 <Link
                   className="robot_item_btn p-3 rounded-lg font-bold hvr-pulse"
                   to="/products-details"
-                  target="_blank"
+                  
                 >
                   {language === "AR"
                     ? `أقرأ المزيد`
@@ -144,13 +154,13 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
             >
               <img src={Robot_Three} alt="robot_3" data-aos="zoom-in" />
               <div className="robot_item_desc" data-aos="zoom-in">
-              <h4 className="robot_item_title text-black mb-2 font-extrabold">
+              <h4 className="robot_item_title text-sm text-black mb-2 font-extrabold">
               High Speed Robotic Palletizer
                 </h4>
                 <h1 className="robot_item_heading text-black mb-3 font-extrabold">
                   EC-201
                 </h1>
-                <p className="robot_item_text text-gray-700 mb-3">
+                <p className="robot_item_text text-sm text-gray-700 mb-3">
                   {language === "AR"
                     ? `EC-201 هو أسرع وأقوى طراز في فوجي.  مثالي للمرافق عالية الإنتاج أو المنتجات الثقيلة.`
                     : language === "EN"
@@ -163,7 +173,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                 <Link
                   className="robot_item_btn p-3 rounded-lg font-bold hvr-pulse"
                   to="/products-details"
-                  target="_blank"
+                  
                 >
                   {language === "AR"
                     ? `أقرأ المزيد`
@@ -174,18 +184,18 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
               </div>
             </div>
             <div
-              className="robot_item p-5 rounded-lg text-center"
+              className="robot_item robot-custom p-5 rounded-lg text-center"
               data-aos="zoom-in"
             >
-              <img src={Robot_Four} alt="robot_3" data-aos="zoom-in" />
+              <img src={Robot_Four} alt="robot_3" data-aos="zoom-in" className="h-60"/>
               <div className="robot_item_desc" data-aos="zoom-in">
-              <h4 className="robot_item_title text-black mb-2 font-extrabold">
+              <h4 className="robot_item_title text-sm text-black mb-2 font-extrabold">
               Heavy Payload Robotic Palletizer
                 </h4>
                 <h1 className="robot_item_heading text-black mb-3 font-extrabold">
                   EC-201W
                 </h1>
-                <p className="robot_item_text text-gray-700 mb-3">
+                <p className="robot_item_text text-sm text-gray-700 mb-3">
                   {language === "AR"
                     ? `EC-201 هو أسرع وأقوى طراز في فوجي.  مثالي للمرافق عالية الإنتاج أو المنتجات الثقيلة.`
                     : language === "EN"
@@ -201,7 +211,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                 <Link
                   className="robot_item_btn p-3 rounded-lg font-bold hvr-pulse"
                   to="/products-details"
-                  target="_blank"
+                  
                 >
                   {language === "AR"
                     ? `أقرأ المزيد`
@@ -212,37 +222,112 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
               </div>
             </div>
           </div>
-          <div className="mt-10">
-                <div className="p-5 pb-10 bg-gray-300">
+          
+                <div className="p-3 pb-5">
                     <div className="robot-heading-container mb-10" data-aos="zoom-in">
                         <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
                             End Effectors
                         </h1>
                     </div>
                     <p
-                        className="robot-video-desc text-black text-center mb-10"
+                        className="robot-video-desc text-black text-center mb-10 w-3/4 m-auto"
                         data-aos="zoom-in"
                     >
                         We understand how End Effectors play an intricate role in successful robotic palletizing applications. Given this critical point, we have spent years developing and refining high quality and cost effective End Effectors. Below is a small example of our End Effector designs.
                     </p>
-                    <div className="flex gap-5 justify-center items-center flex-wrap" data-aos="zoom-in">
+                    <div className="flex gap-10 justify-center items-center flex-wrap" data-aos="zoom-in">
                         <div className="flex flex-col gap-5 rounded-lg bg-white p-5 items-center w-60">
-                            <img src="https://fujiroboticsindia.com/assets/img/Bag-End-Effector.webp" alt="" className="h-32 w-32 hvr-pop" />
+                            <img src="https://fujiroboticsindia.com/assets/img/Bag-End-Effector.webp" alt="" className="size-40 hvr-pop" />
                             <h4 className="text-SecondColor font-extrabold">Bag End Effector</h4>
                         </div>
 
                         <div className="flex flex-col gap-5 rounded-lg bg-white p-5 items-center w-60">
-                            <img src="https://fujiroboticsindia.com/assets/img/Case-End-Effector.webp" alt="" className="h-32 w-32 hvr-pop" />
+                            <img src="https://fujiroboticsindia.com/assets/img/Case-End-Effector.webp" alt="" className="size-40 hvr-pop" />
                             <h4 className="text-SecondColor font-extrabold">Case End Effector</h4>
                         </div>
 
                         <div className="flex flex-col gap-5 rounded-lg bg-white p-5 items-center w-60">
-                            <img src="https://fujiroboticsindia.com/assets/img/Vacuum-End-Effector.webp" alt="" className="h-32 w-32 hvr-pop" />
+                            <img src="https://fujiroboticsindia.com/assets/img/Vacuum-End-Effector.webp" alt="" className="size-40 hvr-pop" />
                             <h4 className="text-SecondColor font-extrabold">Vacuum End Effector</h4>
                         </div>
                     </div>
                 </div>
-            </div>
+
+                <div className="p-3 pb-5">
+                    <div className="robot-heading-container mb-10" data-aos="zoom-in">
+                        <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
+                        Industries We Serve
+                        </h1>
+                    </div>
+                   
+                    <div className="flex gap-10 justify-center items-center flex-wrap w-3/4 m-auto" data-aos="zoom-in">
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon8} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Food</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon3} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Beverage</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon4} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Cement</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon10} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Paints</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon9} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Lubricants</h4>
+                        </div>                 
+                  </div>
+                    {/*  */}
+                    <div className="flex gap-10 justify-center items-center flex-wrap mt-5 w-3/4 m-auto" data-aos="zoom-in">
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon5} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Chemicals</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon2} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Animal Feed</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon1} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Agro Industry</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon7} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">All Kinds of FMCG</h4>
+                        </div>
+                        <div className="flex flex-col gap-2 items-center">
+                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
+                          <img src={icon6} alt="icon" className="hvr-pop" />
+                          </div>
+                            <h4 className="text-black text-md font-medium">Dairy</h4>
+                        </div> 
+                                        
+                    </div>
+                </div>
+            
         </div>
       </div>
       <Footer />
