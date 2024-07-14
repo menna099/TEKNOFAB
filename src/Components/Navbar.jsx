@@ -80,10 +80,13 @@ export default function Navbar({ language, setLanguage }) {
   }, [language]);
 
   useEffect(() => {
-    const updatedNavigation = initialNavigation.map((item) => ({
-      ...item,
-      current: location.pathname === item.to,
-    }));
+    const updatedNavigation = initialNavigation.map((item) => {
+      const isSubItemCurrent = item.subItems?.some((subItem) => location.pathname === subItem.to);
+      return {
+        ...item,
+        current: location.pathname === item.to || isSubItemCurrent,
+      };
+    });
     setNavigation(updatedNavigation);
   }, [location]);
 
@@ -308,37 +311,7 @@ export default function Navbar({ language, setLanguage }) {
               })}
             </div>
           </DisclosurePanel>
-          {/* <DisclosurePanel className="md:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => {
-                let itemName;
-                if (language === "EN") {
-                  itemName = item.nameEn;
-                } else if (language === "TR") {
-                  itemName = item.nameTr;
-                } else {
-                  itemName = item.nameAr;
-                }
-
-                return (
-                  <DisclosureButton
-                    key={itemName}
-                    as="a"
-                    href={item.to}
-                    className={classNames(
-                      item.current
-                        ? "bg-SecondColor text-white"
-                        : "text-black hover:bg-SecondColor hover:text-white",
-                      "block rounded-md px-3 py-2 text-base font-medium"
-                    )}
-                    aria-current={item.current ? "page" : undefined}
-                  >
-                    {itemName}
-                  </DisclosureButton>
-                );
-              })}
-            </div>
-          </DisclosurePanel> */}
+          
         </>
       )}
     </Disclosure>
