@@ -16,21 +16,20 @@ function App() {
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);
-  
+
   return (
     <Router>
       <Routes>
-        <Route exact path="/" element={<Home language={language} setLanguage={setLanguage}/>} />
-        <Route path="/about" element={<About language={language} setLanguage={setLanguage}/>} />
-        <Route path="/contact" element={<Contact language={language} setLanguage={setLanguage}/>} />
-        <Route path='/productdetails' element={<ProductDetails language={language} setLanguage={setLanguage}/>}/>
-        <Route path='/robot-palletizers' element={<RobotPalletizers language={language} setLanguage={setLanguage}/>}/>
-        <Route path='/packing-machines' element={<PackingMachines language={language} setLanguage={setLanguage}/>}/>
-        <Route path='/robot-packing' element={<RobotPacking language={language} setLanguage={setLanguage}/>}/>
-        <Route path='/products-details' element={<ProductDetails language={language} setLanguage={setLanguage}/>}/>
-        <Route path='/case-packer' element={<TopLoadCasePacker language={language} setLanguage={setLanguage}/>}/>
+        <Route exact path="/" element={<Home language={language} setLanguage={setLanguage} />} />
+        <Route path="/about" element={<About language={language} setLanguage={setLanguage} />} />
+        <Route path="/contact" element={<Contact language={language} setLanguage={setLanguage} />} />
+        <Route path='/robot-palletizers' element={<RobotPalletizers language={language} setLanguage={setLanguage} />} />
+        <Route path='/packing-machines' element={<PackingMachines language={language} setLanguage={setLanguage} />} />
+        <Route path='/robot-packing' element={<RobotPacking language={language} setLanguage={setLanguage} />} />
+        <Route path='/products-details' element={<ProductDetails language={language} setLanguage={setLanguage} />} />
+        <Route path='/case-packer' element={<TopLoadCasePacker language={language} setLanguage={setLanguage} />} />
 
-        </Routes>
+      </Routes>
     </Router>
   );
 }
