@@ -53,6 +53,15 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+.robot_item{
+  height: 620px !important;
+}
+.robot_item img{
+  height: 320px !important;
+}
+.robot_item p {
+  line-height: 1.6 !important;
+}
 .about-btn {
   transition: 0.5s ease-in-out;
 }
@@ -263,7 +272,7 @@ body {
   transition: 0.5s ease-in-out;
   width: 50%;
   height: 0%;
-  background: #8dbf9c;
+  background: #7bad41;
   z-index: -1;
 }
 .feature-item::before {
@@ -276,7 +285,7 @@ body {
   transition: 0.5s ease-in-out;
   width: 52%;
   height: 0%;
-  background: #8dbf9c;
+  background: #7bad41;
   z-index: -1;
 }
 .feature-item svg {
@@ -537,4 +546,9 @@ li {
 input:focus,textarea:focus{
   box-shadow: none !important ;
   border: 2px solid #7bad41 !important;
+}
+
+.contact_item{
+  border-bottom: 1px solid #777;
+  margin-bottom: 20px;
 }

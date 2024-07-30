@@ -7,33 +7,38 @@ import Icons from "./Icons";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { Link } from "react-router-dom";
-import topleader from "../assets/top leader.png"
+import topleader from "../assets/top leader.png";
 
 const TopLoadCasePacker = ({ language, setLanguage }) => {
-    useEffect(() => {
-        AOS.init({ duration: 2000 });
-      }, []);
-    return (
-        <>
-        <Navbar language={language} setLanguage={setLanguage} />
-        <div className="robot_palletizers py-10">
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
+  return (
+    <>
+      <Navbar language={language} setLanguage={setLanguage} />
+      <div className="robot_palletizers py-10">
         <div className="px-2 sm:px-6 lg:px-8">
           <div className="robot-heading-container mb-10" data-aos="zoom-in">
             <h1 className="Heading-title font-bold text-2xl  bg-SecondColor p-3 text-center my-4 text-white About_title">
-            TOP LOAD CASE PACKER
+              TOP LOAD CASE PACKER
             </h1>
           </div>
-          <div className="robot_about mb-10 flex items-center w-11/12 m-auto" data-aos="zoom-in">
+          <div
+            className="robot_about mb-10 flex items-center w-11/12 m-auto"
+            data-aos="zoom-in"
+          >
             <div className="robot_desc flex-1" data-aos="zoom-in">
-              <h1 className="robot_about_heading text-3xl">MAX. CAPACITY: 8-16 PACKS / MİNUTE</h1>
+              <h1 className="robot_about_heading text-3xl">
+                MAX. CAPACITY: 8-16 PACKS / MİNUTE
+              </h1>
             </div>
             <div className="about_robot_img text-center" data-aos="zoom-in">
               <img src={topleader} alt="Robot" className="w-96 hvr-pop" />
             </div>
-            </div> 
-           {/*  */}
-           <Tabs data-aos="zoom-in" className="w-11/12 m-auto">
-            <TabList >
+          </div>
+          {/*  */}
+          <Tabs data-aos="zoom-in" className="w-11/12 m-auto">
+            <TabList>
               <Tab>General Advantages</Tab>
               <Tab>Technical Details</Tab>
               <Tab>Optional Equipments</Tab>
@@ -89,8 +94,8 @@ const TopLoadCasePacker = ({ language, setLanguage }) => {
                 Places packages into the box by vibrating them during filling.
               </p>
             </TabPanel>
-            <TabPanel >
-              <table className="table-auto topload-table w-1/2">
+            <TabPanel>
+              <table className="table-auto topload-table w-full">
                 <tr>
                   <td>MAX. CAPACITY: 8-16 Packs / Minute</td>
                 </tr>
@@ -117,7 +122,7 @@ const TopLoadCasePacker = ({ language, setLanguage }) => {
                 </tr>
               </table>
             </TabPanel>
-            <TabPanel >
+            <TabPanel>
               <p className="mb-4">Metal Detector</p>
               <p className="mb-4">Package Weight Control Unit</p>
               <p className="mb-4">Box Weight Control Unit</p>
@@ -125,38 +130,57 @@ const TopLoadCasePacker = ({ language, setLanguage }) => {
               <p className="mb-4">Faulty Box Separation Unit</p>
               <p className="mb-4">QR Code Printing Unit</p>
             </TabPanel>
-            <TabPanel >
-                <div className="flex gap-2 items-center flex-wrap justify-center">
-              <div className="border p-5">
-                <h4 className="text-center">6*6 - 6*5</h4>
-                <img src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg" alt="box" className="w-40"/>
-              </div>
-              <div className="border p-5">
-                <h4 className="text-center">6*6 - 6*5</h4>
-                <img src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg" alt="box" className="w-40"/>
-              </div>
-              <div className="border p-5">
-                <h4 className="text-center">6*6 - 6*5</h4>
-                <img src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg" alt="box" className="w-40"/>
-              </div>
-              <div className="border p-5">
-                <h4 className="text-center">6*6 - 6*5</h4>
-                <img src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg" alt="box" className="w-40"/>
-              </div>
-              <div className="border p-5">
-                <h4 className="text-center">6*6 - 6*5</h4>
-                <img src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg" alt="box" className="w-40"/>
-              </div>
+            <TabPanel>
+              <div className="flex gap-2 items-center flex-wrap xl:justify-start justify-center">
+                <div className="border p-5">
+                  <h4 className="text-center">6*6 - 6*5</h4>
+                  <img
+                    src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg"
+                    alt="box"
+                    className="w-40"
+                  />
+                </div>
+                <div className="border p-5">
+                  <h4 className="text-center">6*6 - 6*5</h4>
+                  <img
+                    src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg"
+                    alt="box"
+                    className="w-40"
+                  />
+                </div>
+                <div className="border p-5">
+                  <h4 className="text-center">6*6 - 6*5</h4>
+                  <img
+                    src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg"
+                    alt="box"
+                    className="w-40"
+                  />
+                </div>
+                <div className="border p-5">
+                  <h4 className="text-center">6*6 - 6*5</h4>
+                  <img
+                    src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg"
+                    alt="box"
+                    className="w-40"
+                  />
+                </div>
+                <div className="border p-5">
+                  <h4 className="text-center">6*6 - 6*5</h4>
+                  <img
+                    src="https://hipermak.com.tr/en/wp-content/uploads/2024/07/4x4x4x5.jpg"
+                    alt="box"
+                    className="w-40"
+                  />
+                </div>
               </div>
             </TabPanel>
-            
           </Tabs>
-           {/*  */}
-          </div>
-          </div>
-          <Footer/>
-          <Icons/>
-        </>
-    );
-}
+          {/*  */}
+        </div>
+      </div>
+      <Footer />
+      <Icons />
+    </>
+  );
+};
 export default TopLoadCasePacker;

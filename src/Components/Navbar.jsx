@@ -32,13 +32,33 @@ const initialNavigation = [
     nameAr: "الحلول",
     to: "",
     subItems: [
-      { nameEn: "Robot Palletizers", nameTr: "Robot Paletleyiciler", nameAr: "روبوتات التكديس", to: "/robot-palletizers" },
-      { nameEn: "Robot Packing", nameTr: "Robot Paketleme", nameAr: "التغليف الآلي", to: "/robot-packing" },
-      { nameEn: "Packing Machines", nameTr: "Paketleme Makinaları", nameAr: "آلات التعبئة", to: "/packing-machines" },
-      { nameEn: "Top Load Case Packer", nameTr: "TOP LOAD CASE PACKER", nameAr: "", to: "/case-packer" },
+      {
+        nameEn: "Top Load Case Packer",
+        nameTr: "Top Load Case Packer",
+        nameAr: "",
+        to: "/case-packer",
+      },
+      {
+        nameEn: "Robot Palletizers",
+        nameTr: "Robot Paletleyiciler",
+        nameAr: "روبوتات التكديس",
+        to: "/robot-palletizers",
+      },
+      {
+        nameEn: "Robot Packing",
+        nameTr: "Robot Paketleme",
+        nameAr: "التغليف الآلي",
+        to: "/robot-packing",
+      },
+      {
+        nameEn: "Checkweigher Conveyor",
+        nameTr: "Kontrol Terazisi Konveyörü",
+        nameAr: "مدقق الوزن",
+        to: "/packing-machines",
+      },
     ],
   },
-  
+
   {
     nameEn: "Contact",
     nameTr: "İletişim",
@@ -81,7 +101,9 @@ export default function Navbar({ language, setLanguage }) {
 
   useEffect(() => {
     const updatedNavigation = initialNavigation.map((item) => {
-      const isSubItemCurrent = item.subItems?.some((subItem) => location.pathname === subItem.to);
+      const isSubItemCurrent = item.subItems?.some(
+        (subItem) => location.pathname === subItem.to
+      );
       return {
         ...item,
         current: location.pathname === item.to || isSubItemCurrent,
@@ -128,7 +150,9 @@ export default function Navbar({ language, setLanguage }) {
                           key={itemName}
                           className=" lg:pe-1 relative"
                           data-twe-nav-item-ref
-                          onMouseEnter={() => setShowSubMenu(item.subItems ? true : false)}
+                          onMouseEnter={() =>
+                            setShowSubMenu(item.subItems ? true : false)
+                          }
                           onMouseLeave={() => setShowSubMenu(false)}
                         >
                           {item.subItems ? (
@@ -142,7 +166,7 @@ export default function Navbar({ language, setLanguage }) {
                                   "rounded-md px-3 py-1 text-sm font-medium cursor-pointer"
                                 )}
                                 aria-current={item.current ? "page" : undefined}
-                               data-twe-nav-link-ref
+                                data-twe-nav-link-ref
                               >
                                 {itemName}
                               </Link>
@@ -294,7 +318,7 @@ export default function Navbar({ language, setLanguage }) {
                           <Link
                             key={subItem.nameEn}
                             to={subItem.to}
-                            className={`block w-full whitespace-nowrap bg-white px-4 py-2 text-sm font-normal dark:text-black dark:hover:bg-SecondColor hover:text-white `}
+                            className={`block w-full whitespace-nowrap px-4 py-2 text-sm font-normal dark:text-black dark:hover:bg-SecondColor hover:text-white `}
                             data-twe-dropdown-item-ref
                           >
                             {language === "EN"
@@ -311,7 +335,6 @@ export default function Navbar({ language, setLanguage }) {
               })}
             </div>
           </DisclosurePanel>
-          
         </>
       )}
     </Disclosure>

@@ -22,10 +22,10 @@ export default function PackingMachines({ language, setLanguage }) {
           <div className="packing-heading-container mb-10" data-aos="zoom-in">
             <h1 className="Heading-title font-bold text-2xl bg-SecondColor p-3 text-center my-4 text-white About_title">
               {language === "AR"
-                ? `آلات التعبئة والتغليف`
+                ? `مدقق الوزن`
                 : language === "EN"
-                ? `Packing Machines`
-                : "Paketleme Makinaları"}
+                ? `Checkweigher Conveyor`
+                : "Kontrol Terazisi Konveyörü"}
             </h1>
           </div>
           <p

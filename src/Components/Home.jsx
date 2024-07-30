@@ -11,8 +11,9 @@ export default function Home ({language,setLanguage}){
         <>
         <Navbar language={language} setLanguage={setLanguage}/>
         <Hero language={language}/>
-        <AboutVideo language={language}/>
+        
         <Services language={language}/>
+        <AboutVideo language={language}/>
         <Footer/> 
         <Icons/>
         </>
