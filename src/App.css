@@ -56,6 +56,12 @@ body {
 .robot_item{
   height: 620px !important;
 }
+@media (max-width: 475px) {
+  .robot_item{
+    height: 100% !important;
+  }
+}
+
 .robot_item img{
   height: 320px !important;
 }
