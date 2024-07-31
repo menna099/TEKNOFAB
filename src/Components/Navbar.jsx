@@ -45,8 +45,8 @@ const initialNavigation = [
         to: "/robot-palletizers",
       },
       {
-        nameEn: "Robot Packing",
-        nameTr: "Robot Paketleme",
+        nameEn: "Packing Robot",
+        nameTr: " Paketleme Robot",
         nameAr: "التغليف الآلي",
         to: "/robot-packing",
       },

@@ -23,7 +23,7 @@ export default function AboutVideo({ language }) {
               : "Ziyaretçilerin kurumun veya kişinin kimliğini ve vizyonunu anlamalarına olanak tanıdığı için güven ve güvenilirlik oluşturmak, bu da sizinle halk arasında güven ve güvenilirlik oluşturmaya katkıda bulunur."}
           </p>
           <div className="video-container" data-aos="zoom-in">
-            <video controls autoPlay loop>
+            <video controls loop>
               <source src={Video} type="video/mp4" />
             </video>
           </div>

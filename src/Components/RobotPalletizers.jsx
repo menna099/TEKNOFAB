@@ -9,16 +9,7 @@ import Robot_Two from "../assets/Robot_2.webp";
 import Robot_Three from "../assets/Robot_3.webp";
 import Robot_Four from "../assets/Robot_4.png";
 import { Link } from "react-router-dom";
-import icon1 from "../assets/icons/1.png"
-import icon2 from "../assets/icons/2.png"
-import icon3 from "../assets/icons/3.png"
-import icon4 from "../assets/icons/4.png"
-import icon5 from "../assets/icons/5.png"
-import icon6 from "../assets/icons/6.png"
-import icon7 from "../assets/icons/7.png"
-import icon8 from "../assets/icons/8.png"
-import icon9 from "../assets/icons/9.png"
-import icon10 from "../assets/icons/10.png"
+
 
 export default function RobotPalletizers({ language, setLanguage }) {
   useEffect(() => {
@@ -253,80 +244,7 @@ Fuji Robotics offers a fully automated Robotic System that ensures no human cont
                     </div>
                 </div>
 
-                <div className="p-3 pb-5">
-                    <div className="robot-heading-container mb-10" data-aos="zoom-in">
-                        <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
-                        Industries We Serve
-                        </h1>
-                    </div>
-                   
-                    <div className="flex gap-10 justify-center items-center flex-wrap w-11/12 m-auto" data-aos="zoom-in">
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon8} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Food</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon3} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Beverage</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon4} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Cement</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon10} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Paints</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon9} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Lubricants</h4>
-                        </div>                 
-                  </div>
-                    {/*  */}
-                    <div className="flex gap-10 justify-center items-center flex-wrap mt-5 w-11/12 m-auto" data-aos="zoom-in">
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon5} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Chemicals</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon2} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Animal Feed</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon1} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Agro Industry</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon7} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">All Kinds of FMCG</h4>
-                        </div>
-                        <div className="flex flex-col gap-2 items-center">
-                          <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
-                          <img src={icon6} alt="icon" className="hvr-pop" />
-                          </div>
-                            <h4 className="text-black text-md font-medium">Dairy</h4>
-                        </div> 
-                                        
-                    </div>
-                </div>
+                
             
         </div>
       </div>

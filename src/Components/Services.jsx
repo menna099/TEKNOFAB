@@ -1,14 +1,11 @@
 import React, { useEffect } from "react";
-import Service1 from "../assets/service_1.png";
-import Service2 from "../assets/service_2.png";
-import Service3 from "../assets/service_3.png";
-import Service4 from "../assets/service_4.png";
-import Service5 from "../assets/service_5.png";
-import Service6 from "../assets/service_6.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
 import topleader from "../assets/top leader.png";
+import Robot_One from "../assets/Robot_1.webp";
+import Robotic_Packing from '../assets/Robotic-packing.png'
+import weight from '../assets/weight.jpg'
 
 export default function Services({ language }) {
   useEffect(() => {
@@ -42,8 +39,8 @@ export default function Services({ language }) {
               <Link to="/case-packer">
                 <div className="relative overflow-hidden bg-cover bg-no-repeat hvr-float w-full">
                   <img
-                    className="rounded-t-lg h-96 block w-full"
-                    src="https://www.koerber-supplychain.com/fileadmin/_processed_/7/c/csm_049_01_Palettizing_Robots_e18b33fb4b.jpg"
+                    className="bg-white rounded-t-lg  h-96 block w-full"
+                    src={topleader}
                     alt=""
                   />
                   <p className="text-white bg-black py-5 text-left pl-5 rounded-b-lg">
@@ -56,8 +53,8 @@ export default function Services({ language }) {
               <Link to="/robot-palletizers">
                 <div className="relative overflow-hidden bg-cover bg-no-repeat  w-full">
                   <img
-                    className="rounded-t-lg h-96 w-full"
-                    src="https://th.bing.com/th/id/R.f6291501a643abc869cdfa851ed478bf?rik=ePty6JOtwHiwLA&pid=ImgRaw&r=0"
+                    className=" rounded-t-lg bg-white h-96 w-full"
+                    src={Robot_One}
                     alt=""
                   />
                   <p className="text-white bg-black py-5 text-left pl-5 rounded-b-lg">
@@ -71,11 +68,11 @@ export default function Services({ language }) {
                 <div className="relative overflow-hidden bg-cover bg-no-repeat w-full">
                   <img
                     className="rounded-t-lg h-96 w-full"
-                    src="https://th.bing.com/th/id/OIP.I7NCZjQodZOKsOt5ty8imwHaFj?rs=1&pid=ImgDetMain"
+                    src={Robotic_Packing}
                     alt=""
                   />
                   <p className="text-white bg-black py-5 text-left pl-5 rounded-b-lg">
-                    Robot Packing
+                     Packing Robot
                   </p>
                 </div>
               </Link>
@@ -85,7 +82,7 @@ export default function Services({ language }) {
                 <div className="relative overflow-hidden bg-cover bg-no-repeat hvr-float w-full">
                   <img
                     className="rounded-t-lg h-96 w-full"
-                    src="https://th.bing.com/th/id/OIP.1HAuo2nqO-HW0qbYbHCnEgHaFj?rs=1&pid=ImgDetMain"
+                    src={weight}
                     alt=""
                   />
                   <p className="text-white bg-black py-5 text-left pl-5 rounded-b-lg">
