@@ -97,79 +97,77 @@ export default function About({ language, setLanguage }) {
         </div>
       </div>
 
-      <div className="p-3 pb-5">
+      <div className="pb-5">
         <div className="robot-heading-container mb-10" data-aos="zoom-in">
           <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
             Industries We Serve
           </h1>
         </div>
 
-        <div className="flex gap-10 justify-center items-center flex-wrap w-11/12 m-auto" data-aos="zoom-in">
-          <div className="flex flex-col gap-2 items-center">
+        <div className="flex flex-wrap justify-center items-center w-3/4 m-auto mt-5" data-aos="zoom-in">
+          {/* العناصر العشرة مع توزيعها على صفين */}
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon8} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Food</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon3} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Beverage</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon4} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Cement</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon10} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Paints</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon9} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Lubricants</h4>
           </div>
-        </div>
-        {/*  */}
-        <div className="flex gap-10 justify-center items-center flex-wrap mt-5 w-11/12 m-auto" data-aos="zoom-in">
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon5} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Chemicals</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon2} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Animal Feed</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon1} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Agro Industry</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon7} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">All Kinds of FMCG</h4>
           </div>
-          <div className="flex flex-col gap-2 items-center">
+          <div className="flex flex-col gap-2 items-center w-full sm:w-1/2 md:w-1/3 lg:w-1/5 p-3">
             <div className="rounded-xl border-gray-400 border bg-white p-3 w-20">
               <img src={icon6} alt="icon" className="hvr-pop" />
             </div>
             <h4 className="text-black text-md font-medium">Dairy</h4>
           </div>
-
         </div>
+
       </div>
       <Footer />
       <Icons />
