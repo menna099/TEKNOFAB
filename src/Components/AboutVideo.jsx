@@ -1,5 +1,6 @@
 import React from "react";
 import Video from "../assets/video.mp4";
+import { Link } from "react-router-dom";
 
 export default function AboutVideo({ language }) {
   return (
@@ -11,16 +12,21 @@ export default function AboutVideo({ language }) {
               {language === "AR"
                 ? `من نحن ؟`
                 : language === "EN"
-                ? `Who Are We ?`
-                : "Kimsin ?"}
+                  ? `Who We Are ?`
+                  : "Kimsin ?"}
             </h1>
           </div>
           <p className="about-video-desc text-black text-center mb-10 w-11/12 m-auto" data-aos="zoom-in">
-            {language === "AR"
-              ? `بناء الثقة والمصداقية حيث تسمح للزوار بفهم هوية ورؤية المؤسسة أو الشخص، مما يساهم في بناء الثقة والمصداقية بينك وبين الجمهور.`
-              : language === "EN"
-              ? `Building trust and credibility as it allows visitors to understand the identity and vision of the institution or person, which contributes to building trust and credibility between you and the public.`
-              : "Ziyaretçilerin kurumun veya kişinin kimliğini ve vizyonunu anlamalarına olanak tanıdığı için güven ve güvenilirlik oluşturmak, bu da sizinle halk arasında güven ve güvenilirlik oluşturmaya katkıda bulunur."}
+            {language === "AR" ? (
+              "بناء الثقة والمصداقية حيث تسمح للزوار بفهم هوية ورؤية المؤسسة أو الشخص، مما يساهم في بناء الثقة والمصداقية بينك وبين الجمهور."
+            ) : language === "EN" ? (
+              <>
+                {"At Teknofab Teknoloji, we specialize in delivering comprehensive End-of-Line Solutions tailored to meet the unique needs of our customers. With a strong focus on innovation and efficiency, we provide advanced "}
+                <Link to="/about" className="text-SecondColor text-lg">see more details...</Link>
+              </>
+            ) : (
+              "Ziyaretçilerin kurumun veya kişinin kimliğini ve vizyonunu anlamalarına olanak tanıdığı için güven ve güvenilirlik oluşturmak, bu da sizinle halk arasında güven ve güvenilirlik oluşturmaya katkıda bulunur."
+            )}
           </p>
           <div className="video-container" data-aos="zoom-in">
             <video controls loop>

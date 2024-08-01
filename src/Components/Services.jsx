@@ -20,8 +20,8 @@ export default function Services({ language }) {
               {language === "AR"
                 ? ` الحلول `
                 : language === "EN"
-                ? `Our Solutions`
-                : "Çözümlerimiz"}
+                  ? `Our Solutions`
+                  : "Çözümlerimiz"}
             </h1>
           </div>
           <p
@@ -31,15 +31,15 @@ export default function Services({ language }) {
             {language === "AR"
               ? ` نحن نهتم دائمًا بأعمال عملائنا ، فنحن نقدم خدمة عالية الجودة وأفضل الحلول لنشاطك التجاري. بفضل أحدث التقنيات وأتمتة عمليات التطوير ، نحن نقدم سرعة ونوعية التطوير. `
               : language === "EN"
-              ? `We always care about our customers' business, we provide quality service and the best solutions for your business. Thanks to the latest technology and automation of development processes, we offer the speed and quality of development.`
-              : "Müşterilerimizin işini her zaman önemsiyor, kaliteli hizmet ve işletmeniz için en iyi çözümleri sunuyoruz. En son teknoloji ve geliştirme süreçlerinin otomasyonu sayesinde, geliştirmenin hızını ve kalitesini sunuyoruz."}
+                ? `We work closely with each client to develop tailored Industry 4.0 automation solutions that include packaging, labeling, and quality control checks before the products are shipped to customers or distribution centers.`
+                : "Müşterilerimizin işini her zaman önemsiyor, kaliteli hizmet ve işletmeniz için en iyi çözümleri sunuyoruz. En son teknoloji ve geliştirme süreçlerinin otomasyonu sayesinde, geliştirmenin hızını ve kalitesini sunuyoruz."}
           </p>
-          <div className="services-items lg:columns-2 space-y-5 gap-5 text-center mt-10 w-11/12 m-auto">
-            <div className="block rounded-lg hvr-float shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface">
+          <div className="flex flex-wrap justify-center items-center mt-10 w-11/12 mx-auto">
+            <div className="block rounded-lg hvr-float shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface w-full sm:w-1/2 lg:w-1/2 p-2">
               <Link to="/case-packer">
-                <div className="relative overflow-hidden bg-cover bg-no-repeat hvr-float w-full">
+                <div className="relative rounded-t-lg overflow-hidden bg-cover bg-no-repeat hvr-float w-11/12  bg-white">
                   <img
-                    className="bg-white rounded-t-lg  h-96 block w-full"
+                    className="bg-white rounded-t-lg h-80 block w-8/12 m-auto"
                     src={topleader}
                     alt=""
                   />
@@ -49,11 +49,11 @@ export default function Services({ language }) {
                 </div>
               </Link>
             </div>
-            <div className="block rounded-lg hvr-float shadow-secondary-1  dark:bg-surface-dark dark:text-white text-surface">
+            <div className="block rounded-lg hvr-float shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface w-full sm:w-1/2 lg:w-1/2 p-2">
               <Link to="/robot-palletizers">
-                <div className="relative overflow-hidden bg-cover bg-no-repeat  w-full">
+                <div className="relative overflow-hidden bg-cover bg-no-repeat hvr-float w-11/12">
                   <img
-                    className=" rounded-t-lg bg-white h-96 w-full"
+                    className="bg-white rounded-t-lg h-80 block w-full"
                     src={Robot_One}
                     alt=""
                   />
@@ -63,25 +63,25 @@ export default function Services({ language }) {
                 </div>
               </Link>
             </div>
-            <div className="block rounded-lg shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface hvr-float">
+            <div className="block rounded-lg hvr-float shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface w-full sm:w-1/2 lg:w-1/2 p-2">
               <Link to="/robot-packing">
-                <div className="relative overflow-hidden bg-cover bg-no-repeat w-full">
+                <div className="relative overflow-hidden bg-cover bg-no-repeat hvr-float w-11/12">
                   <img
-                    className="rounded-t-lg h-96 w-full"
+                    className="bg-white rounded-t-lg h-80 block w-full"
                     src={Robotic_Packing}
                     alt=""
                   />
                   <p className="text-white bg-black py-5 text-left pl-5 rounded-b-lg">
-                     Packing Robot
+                    Packing Robot
                   </p>
                 </div>
               </Link>
             </div>
-            <div className="block rounded-lg  shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface hvr-float">
-              <Link to="/packing-machines">
-                <div className="relative overflow-hidden bg-cover bg-no-repeat hvr-float w-full">
+            <div className="block rounded-lg hvr-float shadow-secondary-1 dark:bg-surface-dark dark:text-white text-surface w-full sm:w-1/2 lg:w-1/2 p-2">
+              <Link to="/packing-machines" className="m-0">
+                <div className="relative overflow-hidden bg-cover bg-no-repeat w-11/12">
                   <img
-                    className="rounded-t-lg h-96 w-full"
+                    className="rounded-t-lg bg-white h-80 w-full"
                     src={weight}
                     alt=""
                   />
@@ -92,6 +92,7 @@ export default function Services({ language }) {
               </Link>
             </div>
           </div>
+
         </div>
       </div>
     </>
