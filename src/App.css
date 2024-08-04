@@ -18,7 +18,8 @@ body {
 .aboutvideo-heading-container,
 .tabs-heading-container,
 .robot-heading-container,
-.packing-heading-container {
+.packing-heading-container,
+.check-conveyor-container {
   position: relative;
   z-index: 2;
 }
@@ -557,4 +558,71 @@ input:focus,textarea:focus{
 .contact_item{
   border-bottom: 1px solid #777;
   margin-bottom: 20px;
+}
+.image-gallery-slide-wrapper img{
+  width: 500px;
+  height: 400px;
+}
+.image-gallery-thumbnails-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.image-gallery-thumbnails-container img{
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.image-gallery {
+  overflow: hidden;
+  text-align: center;
+}
+.image-gallery-slides{
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+.react-photo-album--rows, .react-photo-album--track{
+  flex-wrap: wrap !important;
+}
+.react-photo-album--rows img{
+  border-radius: 10px;
+  border: 1px solid #777;
+}
+.checker-content-heading{
+  font-weight: bold;
+  font-size: 30px;
+}
+.conveyor_table th{
+  text-align: left;
+  padding: 10px;
+}
+@media (max-width: 576px) {
+  .conveyor_table th, .conveyor_table td{
+    font-size: 15px;
+  }
+}
+.key_features_item img{
+  width: 60px;
+  margin: 0 auto 10px;
+}
+.key_features_item h1{
+  font-weight: bold;
+}
+
+@media (max-width: 576px) {
+  .Heading-title::after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .check-conveyor-container h1{
+    font-size: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .check-conveyor-container h1{
+    font-size: 25px;
+  }
 }

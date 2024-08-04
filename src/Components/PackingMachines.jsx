@@ -1,231 +1,216 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment, useEffect, useState, Link } from "react";
+import { RowsPhotoAlbum } from "react-photo-album";
+import "react-photo-album/rows.css";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Icons from "./Icons";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Pack_One from "../assets/pack_machine_1.webp";
-import Pack_Two from "../assets/pack_machine_2.webp";
-import Pack_Three from "../assets/pack_machine_3.webp";
-import Pack_Four from "../assets/pack_machine_4.webp";
-import Pack_Video_One from "../assets/video.mp4";
+import IconOne from "../assets/icon_1.png";
+import IconTwo from "../assets/icon_2.png";
+import IconThree from "../assets/icon_3.png";
+import IconFour from "../assets/icon_4.png";
+import IconFive from "../assets/icon_5.png";
+import IconSix from "../assets/icon_6.png";
 
 export default function PackingMachines({ language, setLanguage }) {
+  const [active, setActive] = useState(
+    "https://th.bing.com/th/id/R.61c3af0a54c0dc15821ac4f4896b39cc?rik=XNALvThEgGEBsQ&pid=ImgRaw&r=0"
+  );
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
+  const images = [
+    {
+      original:
+        "https://th.bing.com/th/id/R.61c3af0a54c0dc15821ac4f4896b39cc?rik=XNALvThEgGEBsQ&pid=ImgRaw&r=0",
+      thumbnail:
+        "https://th.bing.com/th/id/R.61c3af0a54c0dc15821ac4f4896b39cc?rik=XNALvThEgGEBsQ&pid=ImgRaw&r=0",
+    },
+    {
+      original:
+        "https://www.spackmachine.com/wp-content/uploads/2022/03/16-1.png",
+      thumbnail:
+        "https://www.spackmachine.com/wp-content/uploads/2022/03/16-1.png",
+    },
+    {
+      original:
+        "https://th.bing.com/th/id/OIP.faZic5JW-Qp47nJQHUtacwAAAA?w=421&h=547&rs=1&pid=ImgDetMain",
+      thumbnail:
+        "https://th.bing.com/th/id/OIP.faZic5JW-Qp47nJQHUtacwAAAA?w=421&h=547&rs=1&pid=ImgDetMain",
+    },
+    {
+      original:
+        "https://th.bing.com/th/id/R.6b0a2b14d7d177c6826a771e1c58c43c?rik=M%2bXJrHOufYrsqQ&riu=http%3a%2f%2fwww.sinopham.com%2fcrab%2fimage%2forigin%2f2022%2f08%2f30%2f62a66a3d0fbb4d7ad65084e139227416.jpeg&ehk=5sQUFH44fWyzzjClPkn57TJFV7wPABEfHLbjX9yhioM%3d&risl=&pid=ImgRaw&r=0",
+      thumbnail:
+        "https://th.bing.com/th/id/R.6b0a2b14d7d177c6826a771e1c58c43c?rik=M%2bXJrHOufYrsqQ&riu=http%3a%2f%2fwww.sinopham.com%2fcrab%2fimage%2forigin%2f2022%2f08%2f30%2f62a66a3d0fbb4d7ad65084e139227416.jpeg&ehk=5sQUFH44fWyzzjClPkn57TJFV7wPABEfHLbjX9yhioM%3d&risl=&pid=ImgRaw&r=0",
+    },
+  ];
+  const photos = [
+    {
+      src: "https://th.bing.com/th/id/R.61c3af0a54c0dc15821ac4f4896b39cc?rik=XNALvThEgGEBsQ&pid=ImgRaw&r=0",
+      width: 800,
+      height: 600,
+    },
+    {
+      src: "https://www.spackmachine.com/wp-content/uploads/2022/03/16-1.png",
+      width: 1600,
+      height: 900,
+    },
+    {
+      src: "https://th.bing.com/th/id/OIP.faZic5JW-Qp47nJQHUtacwAAAA?w=421&h=547&rs=1&pid=ImgDetMain",
+      width: 1600,
+      height: 900,
+    },
+    {
+      src: "https://th.bing.com/th/id/R.6b0a2b14d7d177c6826a771e1c58c43c?rik=M%2bXJrHOufYrsqQ&riu=http%3a%2f%2fwww.sinopham.com%2fcrab%2fimage%2forigin%2f2022%2f08%2f30%2f62a66a3d0fbb4d7ad65084e139227416.jpeg&ehk=5sQUFH44fWyzzjClPkn57TJFV7wPABEfHLbjX9yhioM%3d&risl=&pid=ImgRaw&r=0",
+      width: 1600,
+      height: 900,
+    },
+  ];
+
   return (
     <Fragment>
       <Navbar language={language} setLanguage={setLanguage} />
-      <div className="packing_machines py-10">
-        <div className="px-2 sm:px-6 lg:px-8">
-          <div className="packing-heading-container mb-10" data-aos="zoom-in">
-            <h1 className="Heading-title font-bold text-2xl bg-SecondColor p-3 text-center my-4 text-white About_title">
-              {language === "AR"
-                ? `مدقق الوزن`
-                : language === "EN"
-                ? `Checkweigher Conveyor`
-                : "Kontrol Terazisi Konveyörü"}
-            </h1>
-          </div>
-          <p
-            className="packing-desc text-black text-center mb-10 w-11/12 m-auto"
-            data-aos="zoom-in"
-          >
-            {language === "AR"
-              ? `إنها تشكل وتملأ وتغلق وتلتف وتنظف وتعبئ على مستويات مختلفة من الأتمتة. هذه الآلات ضرورية في مختلف الصناعات مثل الأغذية والمشروبات والأدوية والسلع الاستهلاكية.`
-              : language === "EN"
-              ? `They form, fill, seal, wrap, clean, and package at different levels of automation. These machines are essential across various industries such as food, beverage, pharmaceutical, and consumer goods.`
-              : "Farklı otomasyon seviyelerinde şekillendirir, doldurur, mühürler, sarar, temizler ve paketler. Bu makineler yiyecek, içecek, ilaç ve tüketim malları gibi çeşitli endüstrilerde gereklidir."}
-          </p>
-          <div className="packing_container  w-11/12 m-auto">
-            <div
-              className="packing_item p-5 rounded-lg gap-4 mb-5 "
-              data-aos="zoom-in"
-            >
-              <div
-                className="packing_item_details p-4 rounded-lg bg-SecondColor flex items-center justify-between gap-4 mb-5"
-                data-aos="zoom-in"
-              >
-                <div className="packing_item_desc" data-aos="zoom-in">
-                  <h1
-                    className="packing_item_heading dark:text-white mb-3 font-extrabold"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `حقيبة منصات نقالة`
-                      : language === "EN"
-                      ? `Bag Palletizing`
-                      : "Torba Paletleme"}
-                  </h1>
-                  <p
-                    className="packing_item_text text-gray-50"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `
-منصات فوجي لدينا متخصصة في التعامل مع الأكياس. اختر من بين أحد أنماط منصات التحميل المحملة مسبقا وحقق إنتاجا يصل إلى 30 كيسا / دقيقة`
-                      : language === "EN"
-                      ? `Our Fuji palletizers are specialized for sack handling. Choose from one of our preloaded palletizing patterns and achieve an output up to 30 bags/minute`
-                      : "Fuji paletleyicilerimiz çuval taşıma için uzmanlaşmıştır. Önceden yüklenmiş paletleme modellerimizden birini seçin ve dakikada 30 torbaya kadar çıktı elde edin"}
-                  </p>
-                </div>
-                <img
-                  src={Pack_One}
-                  alt="Pack_One"
-                  className="rounded-lg lg:flex-1"
-                  data-aos="zoom-in"
-                />
-              </div>
-              <div className="pack-video-container" data-aos="zoom-in">
-                <video
-                  controls
-                  className="rounded-lg mx-auto"
-                  poster={Pack_One}
-                >
-                  <source src={Pack_Video_One} type="video/mp4" />
-                </video>
-              </div>
+      <div className="p-5 max-w-7xl m-auto mt-5">
+        <div className="check-conveyor-container mb-10" data-aos="zoom-in">
+          <h1 className="Heading-title font-bold  bg-SecondColor p-3 text-center my-4 text-white About_title">
+            Checkweigher Conveyor
+          </h1>
+        </div>
+        {<RowsPhotoAlbum photos={photos} />}
+        <div className="checker-content">
+          <h1 className="text-SecondColor checker-content-heading mt-10 mb-5 text-center">
+            Product Description
+          </h1>
+          <h4 className="font-bold text-lg text-center mb-5">
+            key features and functions of an automatic checkweigher with
+            rejector:
+          </h4>
+          <div className="key_features md:columns-2 lg:columns-3 mb-10">
+            <div className="key_features_item text-center mb-5">
+              <img src={IconTwo} alt="key" className="hvr-pop" />
+              <h1>Basic Weighing Functionality</h1>
             </div>
-            <div
-              className="packing_item p-5 rounded-lg gap-4 mb-5 "
-              data-aos="zoom-in"
-            >
-              <div
-                className="packing_item_details p-4 rounded-lg bg-SecondColor flex items-center justify-between gap-4 mb-5"
-                data-aos="zoom-in"
-              >
-                <div className="packing_item_desc" data-aos="zoom-in">
-                  <h1 className="packing_item_heading text-white mb-3 font-extrabold">
-                    {language === "AR"
-                      ? `حالة منصات نقالة`
-                      : language === "EN"
-                      ? `Case Palletizing`
-                      : "Koli Paletleme"}
-                  </h1>
-                  <p
-                    className="packing_item_text text-gray-50"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `الحالات والصناديق هي أيضا مجال من مجالات خبرتنا.  اختر قابضا مع ضبط تلقائي للعرض للتعامل مع أنواع مختلفة من المنتجات في نفس الوقت. التقط أكثر من 1 منتج دفعة واحدة لزيادة إنتاج خط الإنتاج الخاص بك.`
-                      : language === "EN"
-                      ? `Cases and Boxes is also  an area of our expertise.  Choose a gripper with auto width adjustment to handle  different kinds of products at the same time. Pick up more than 1 product at once to increase the output of your production line.`
-                      : "Kılıflar ve Kutular da uzmanlık alanımızın bir alanıdır.  Farklı türdeki ürünleri aynı anda işlemek için otomatik genişlik ayarlı bir tutucu seçin. Üretim hattınızın çıktısını artırmak için aynı anda 1'den fazla ürün alın."}
-                  </p>
-                </div>
-                <img
-                  src={Pack_Two}
-                  alt="Pack_Two"
-                  className="rounded-lg lg:flex-1"
-                  data-aos="zoom-in"
-                />
-              </div>
-              <div className="pack-video-container" data-aos="zoom-in">
-                <video
-                  controls
-                  className="rounded-lg mx-auto"
-                  poster={Pack_Two}
-                >
-                  <source src={Pack_Video_One} type="video/mp4" />
-                </video>
-              </div>
+            <div className="key_features_item text-center mb-5">
+              <img src={IconFour} alt="key" className="hvr-pop" />
+              <h1>Simple User Interface</h1>
             </div>
-            <div
-              className="packing_item p-5 rounded-lg gap-4 mb-5 "
-              data-aos="zoom-in"
-            >
-              <div
-                className="packing_item_details p-4 rounded-lg bg-SecondColor flex items-center justify-between gap-4 mb-5"
-                data-aos="zoom-in"
-              >
-                <div className="packing_item_desc" data-aos="zoom-in">
-                  <h1
-                    className="packing_item_heading text-white mb-3 font-extrabold"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `فراغ منصات نقالة`
-                      : language === "EN"
-                      ? `Vacuum Palletizing`
-                      : "Vakumlu Paletleme"}
-                  </h1>
-                  <p
-                    className="packing_item_text text-gray-50"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `القابضون فراغ التكيف مع أي نوع من الاحتياجات. يمكنك وضع منصات نقالة أو إزالة منصات نقالة من العديد من المنتجات المختلفة فقط باستخدام مستجيب نهائي واحد مما يوفر لك المال والمتاعب على المدى الطويل.`
-                      : language === "EN"
-                      ? `Vacuum grippers adapt to any kind of need. You can palletize or depalletize many different products just with one End Effector saving you money and troubles in the long run.`
-                      : "Vakumlu tutucular her türlü ihtiyaca uyum sağlar. Tek bir Uç Efektörü ile birçok farklı ürünü paletleyebilir veya paletten çıkarabilir, uzun vadede paradan ve zahmetten tasarruf edebilirsiniz."}
-                  </p>
-                </div>
-                <img
-                  src={Pack_Three}
-                  alt="Pack_Three"
-                  className="rounded-lg lg:flex-1"
-                  data-aos="zoom-in"
-                />
-              </div>
-              <div className="pack-video-container" data-aos="zoom-in">
-                <video
-                  controls
-                  className="rounded-lg mx-auto"
-                  poster={Pack_Three}
-                >
-                  <source src={Pack_Video_One} type="video/mp4" />
-                </video>
-              </div>
+            <div className="key_features_item text-center mb-5">
+              <img src={IconOne} alt="key" className="hvr-pop" />
+              <h1>Speed and Throughput</h1>
             </div>
-            <div
-              className="packing_item p-5 rounded-lg gap-4 mb-5 "
-              data-aos="zoom-in"
-            >
-              <div
-                className="packing_item_details p-4 rounded-lg bg-SecondColor flex items-center justify-between gap-4 mb-5"
-                data-aos="zoom-in"
-              >
-                <div className="packing_item_desc" data-aos="zoom-in">
-                  <h1
-                    className="packing_item_heading text-white mb-3 font-extrabold"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `أباريق الماء منصات نقالة`
-                      : language === "EN"
-                      ? `Water Jugs Palletizing`
-                      : "Su Sürahileri Paletleme"}
-                  </h1>
-                  <p
-                    className="packing_item_text text-gray-50"
-                    data-aos="zoom-in"
-                  >
-                    {language === "AR"
-                      ? `روبوتات Fuji Ace مرنة ويمكنها التعامل مع أنواع متعددة من المنتجات. يمكن بسهولة وضع أباريق الماء على منصات نقالة بواسطة روبوتاتنا بمعدل مرتفع.`
-                      : language === "EN"
-                      ? `Fuji Ace robots are flexible and can handle multiple types of products. Jugs of water could be easily palletized by our robots at a high rate.`
-                      : "Fuji Ace robotları esnektir ve birden fazla ürün türünü işleyebilir. Su sürahileri robotlarımız tarafından yüksek oranda kolayca paletlenebilir."}
-                  </p>
-                </div>
-                <img
-                  src={Pack_Four}
-                  alt="Pack_Four"
-                  className="rounded-lg lg:flex-1"
-                  data-aos="zoom-in"
-                />
-              </div>
-              <div className="pack-video-container" data-aos="zoom-in">
-                <video
-                  controls
-                  className="rounded-lg mx-auto"
-                  poster={Pack_Four}
-                >
-                  <source src={Pack_Video_One} type="video/mp4" />
-                </video>
-              </div>
+            <div className="key_features_item text-center mb-5">
+              <img src={IconSix} alt="key" className="hvr-pop" />
+              <h1>Compact Design</h1>
+            </div>
+            <div className="key_features_item text-center mb-5">
+              <img src={IconThree} alt="key" className="hvr-pop" />
+              <h1>Cost-Effective Maintenance</h1>
+            </div>
+            <div className="key_features_item text-center mb-5">
+              <img src={IconFive} alt="key" className="hvr-pop" />
+              <h1>Basic Data Reporting</h1>
             </div>
           </div>
+          <div className="checker_items"></div>
+          <table className="table-auto topload-table w-full conveyor_table">
+            <tr>
+              <th>Model</th>
+              <td>DHCW-500*200</td>
+            </tr>
+            <tr>
+              <th rowSpan="2">Weighing product</th>
+              <td>Weight range (1g-5000g)</td>
+            </tr>
+            <tr>
+              <td>Max size: (300*150*250 mm L*W*H)</td>
+            </tr>
+            <tr>
+              <th>Weighing capacity</th>
+              <td>3000g</td>
+            </tr>
+            <tr>
+              <th>Minimum graduation</th>
+              <td>0.01g</td>
+            </tr>
+            <tr>
+              <th>Weighing speed</th>
+              <td>0.120 pcs/min</td>
+            </tr>
+            <tr>
+              <th>Weighing accuracy</th>
+              <td>±1-3g</td>
+            </tr>
+            <tr>
+              <th>Weighing belt size</th>
+              <td>500mm*200mm (L*W)</td>
+            </tr>
+            <tr>
+              <th>Weighing direction</th>
+              <td>From left to right (Facing the operation display)</td>
+            </tr>
+            <tr>
+              <th>Weighing sensor</th>
+              <td>Germany HBM</td>
+            </tr>
+            <tr>
+              <th>Control system</th>
+              <td>Dahang (Independent R & D)</td>
+            </tr>
+            <tr>
+              <th>Operation display</th>
+              <td>8 inches touch screen</td>
+            </tr>
+            <tr>
+              <th>Weighing data output</th>
+              <td>USB port</td>
+            </tr>
+            <tr>
+              <th>Rejecting type</th>
+              <td>Flapper/pusher (with light alarming)</td>
+            </tr>
+            <tr>
+              <th>Products parameters</th>
+              <td>Can restore and recall 100 products</td>
+            </tr>
+            <tr>
+              <th>Belt conveyor</th>
+              <td>Food grade white color Belt</td>
+            </tr>
+            <tr>
+              <th>Language</th>
+              <td>English</td>
+            </tr>
+            <tr>
+              <th>Height of conveyor</th>
+              <td>750+60mm (Customized)</td>
+            </tr>
+            <tr>
+              <th>Power supply</th>
+              <td>Single phase AC220V±10%, 50/60HZ</td>
+            </tr>
+            <tr>
+              <th>Construction</th>
+              <td>SUS304, polishing</td>
+            </tr>
+            <tr>
+              <th>Using environment</th>
+              <td>Normal</td>
+            </tr>
+            <tr>
+              <th>Package</th>
+              <td>
+                With plastic film inside and professional export wooden case
+                outside.
+              </td>
+            </tr>
+            <tr>
+              <th>HS code</th>
+              <td>84232010.00</td>
+            </tr>
+          </table>
         </div>
       </div>
       <Footer />
