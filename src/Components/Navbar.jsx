@@ -179,7 +179,7 @@ export default function Navbar({ language, setLanguage }) {
                                     <li key={subItem.nameEn}>
                                       <Link
                                         to={subItem.to}
-                                        className={`block w-full bg-white px-4 py-2 text-sm font-normal dark:text-black dark:hover:bg-SecondColor hover:text-white`}
+                                        className={`block w-full bg-white px-4 py-2 text-sm font-normal dark:text-black hover:bg-SecondColor hover:text-white`}
                                         data-twe-dropdown-item-ref
                                       >
                                         {language === "EN"

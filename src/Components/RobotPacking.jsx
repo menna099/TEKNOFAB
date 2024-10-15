@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import Navbar from "./Navbar";
+import Icons from "./Icons";
+import Footer from "./Footer";
 import AOS from "aos";
 import video1 from "../assets/Video1.mp4";
 import video2 from "../assets/Video2.mp4";
@@ -85,6 +87,8 @@ export default function RobotPacking({ language, setLanguage }) {
           {/*  */}
         </div>
       </div>
+      <Footer />
+      <Icons />
     </>
   );
 }

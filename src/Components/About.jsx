@@ -22,9 +22,8 @@ export default function About({ language, setLanguage }) {
   useEffect(() => {
     AOS.init({ duration: 2000 });
   }, []);
+
   return (
-
-
     <Fragment>
       <Navbar language={language} setLanguage={setLanguage} />
       <div className="About py-10">
@@ -39,8 +38,8 @@ export default function About({ language, setLanguage }) {
             </h1>
           </div>
           <div className="flex flex-wrap justify-center items-center w-11/12 m-auto">
-  <div className="flex flex-col w-full lg:w-1/2" data-aos="zoom-in">
-    <p className="text-black">
+            <div className="flex flex-col w-full lg:w-1/2" data-aos="zoom-in">
+                <p className="text-black">
       {language === "AR"
         ? `في شركة تكنوفاب تيكنولوجي، نحن متخصصون في تقديم حلول شاملة في نهاية خط الإنتاج مصممة لتلبية الاحتياجات الفريدة لعملائنا. مع التركيز القوي على الابتكار والكفاءة، نقدم آلات تكديس متقدمة وحلول تعبئة آلية مصممة لتحسين عملية التعبئة والتغليف الخاصة بك. يضمن التزامنا بالتميز أن حلولنا لا تعزز الإنتاجية فحسب، بل تتكامل أيضًا بسلاسة في عملياتك الحالية. اشترك مع تكنوفاب تيكنولوجي للحصول على أحدث التقنيات والدعم الذي لا مثيل له في تحقيق أهداف أتمتة نهاية خط الإنتاج الخاصة بك.`
         : language === "EN"
